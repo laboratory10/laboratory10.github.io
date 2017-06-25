@@ -14,10 +14,10 @@ p {
 	font-family: "Courier New";
 	font-size: 32px;
 	color: #1AE7A6;
-	padding: 5px 5px 5px 5px;
+	margin: 5px 5px 5px 5px;
 }
 
 .logoBanner {
 	background-color: #505050;
-	padding: 5px 5px 5px 5px;
+	margin: 5px 5px 5px 5px;
 }
