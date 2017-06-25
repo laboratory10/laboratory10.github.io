@@ -15,5 +15,8 @@ p {
 	font-family: "Courier New";
 	font-size: 32px;
 	color: #1AE7A6;
+	margin-befor: 0em;
+	margin-after: 0em;
+	padding: 1em;
 	background-color: #303030;
 }
