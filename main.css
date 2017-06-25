@@ -16,7 +16,7 @@ p {
 #main-wrapper{
 	box-sizing: border-box;
 	min-height: 100%;
-	padding: 0 0 150px;
+	padding-bottom: 150px;
 	position: relative;
 }
 #main-content {
