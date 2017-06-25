@@ -34,18 +34,18 @@ p {
 button {
     background-color: black;
     border: none;
-    color: white;
+    color: 1ae7a6;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+	margin: 30px;
 }
 
 footer {
 	height: 150px;
-	background-color: #1ae7a6;
-	text-align: center;
+	background-color: #303030;
 	position: absolute;
 	bottom: 0;
 	left: 0;
