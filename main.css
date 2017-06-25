@@ -4,6 +4,9 @@ body{
 	width: 100%;
 	background-color: #303030;
 }
+header {
+	background-color: #505050;
+}
 h1 {
 	font-family: "Courier New";
 	font-size: 56px;
@@ -14,9 +17,4 @@ p {
 	font-family: "Courier New";
 	font-size: 32px;
 	color: #1AE7A6;
-}
-
-.logoBanner {
-	background-color: #505050;
-	width:100%;
 }
