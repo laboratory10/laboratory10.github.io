@@ -1,6 +1,6 @@
 body{
 	text-align: center;
-	
+	margin: 0px;
 	background-color: #202020;
 }
 header {
@@ -19,4 +19,11 @@ p {
 	-webkit-margin-after: 0em;
 	padding: 1em;
 	background-color: #303030;
+}
+footer {
+	background-color: #101010;
+}
+
+#footnote {
+	color:white;
 }
