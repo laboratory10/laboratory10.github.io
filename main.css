@@ -2,7 +2,7 @@ body{
 	text-align: center;
 	margin: 0px;
 	padding: 0px;
-	height: 100%
+	height: 100%;
 	background-color: #202020;
 }
 header {
@@ -31,7 +31,7 @@ p {
 	font-size: 24px;
 	margin-bottom: 0px;
 	text-align: center;
-	text-align: middle;
+	margin-before: 10px;
 	background-color: #050505;
 }
 
