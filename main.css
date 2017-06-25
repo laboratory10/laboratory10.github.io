@@ -19,6 +19,6 @@ p {
 .logoBanner {
 	background-color: #505050;
 	width:100%;
-	padding: 0;
-	margin: 0;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
 }
