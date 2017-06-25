@@ -5,9 +5,11 @@ body{
 	background-color: #202020;
 }
 header {
+	text-align:center;
 	background-color: #505050;
 }
 p {
+	text-align: center;
 	-webkit-margin-before: 0em;
 	-webkit-margin-after: 0em;
 }
