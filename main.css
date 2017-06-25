@@ -1,7 +1,7 @@
 body{
 	text-align: center;
 	height: 100%;
-	width: 100%;
+	width: 98%;
 	background-color: #303030;
 }
 h1 {
@@ -14,10 +14,8 @@ p {
 	font-family: "Courier New";
 	font-size: 32px;
 	color: #1AE7A6;
-	margin: 5px 5px 5px 5px;
 }
 
 .logoBanner {
 	background-color: #505050;
-	margin: 5px 5px 5px 5px;
 }
