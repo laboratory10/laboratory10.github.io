@@ -15,15 +15,13 @@ p {
 #main-wrapper{
 	box-sizing: border-box;
 	min-height: 100%;
-	padding: 0 0 100px;
+	padding: 0 0 150px;
 	position: relative;
 }
 #main-content {
 	font-family: "Courier New";
 	font-size: 32px;
 	color: #1AE7A6;
-	padding: 1em;
-	margin-bottom: 150px;
 	background-color: #303030;
 }
 
