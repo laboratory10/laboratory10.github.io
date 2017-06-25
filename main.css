@@ -20,10 +20,8 @@ p {
 	padding: 1em;
 	background-color: #303030;
 }
-footer {
-	background-color: #101010;
-}
 
-#footnote {
+#footnotes {
 	color:white;
+	background-color: #101010;
 }
