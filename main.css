@@ -6,11 +6,6 @@ body{
 header {
 	background-color: #505050;
 }
-h1 {
-	font-family: "Courier New";
-	font-size: 56px;
-	color: #1AE7A6; 
-}
 p {
 	font-family: "Courier New";
 	font-size: 32px;
@@ -18,10 +13,17 @@ p {
 	-webkit-margin-before: 0em;
 	-webkit-margin-after: 0em;
 	padding: 1em;
+	margin-bottom: 150px;
 	background-color: #303030;
 }
 
 #footnotes {
 	color:white;
 	background-color: #101010;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	height: 150px;
 }
