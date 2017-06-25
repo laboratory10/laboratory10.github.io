@@ -13,7 +13,7 @@ p {
 	-webkit-margin-before: 0em;
 	-webkit-margin-after: 0em;
 }
-#main-wrapper{
+.main-wrapper{
 	box-sizing: border-box;
 	min-height: 100%;
 	padding-bottom: 150px;
