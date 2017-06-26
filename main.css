@@ -44,6 +44,21 @@ button {
 	margin-top: 48px;
 }
 
+.contact-button a {
+  cursor: pointer;
+  margin-left: 30px;
+  padding: 16px 32px;
+  border: 1px solid #1ae7a6;
+  position:relative;
+  background-color: #101010;
+  margin-top: 48px;
+
+}
+
+.contact-button a:active {
+  top: 2px;
+}
+
 footer {
 	height: 150px;
 	background-color: #303030;
