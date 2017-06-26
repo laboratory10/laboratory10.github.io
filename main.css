@@ -44,18 +44,17 @@ button {
 	margin-top: 48px;
 }
 .contact-button {
-	display:inline-block;
+	margiin-top: 48px;
+	margin-left: 30px;
 }
 
 .contact-button a {
   cursor: pointer;
-  margin-left: 30px;
   padding: 16px 32px;
   border: 1px solid #1ae7a6;
   color: #1ae7a6;
   position:relative;
   background-color: #101010;
-  margin-top: 48px;
 
 }
 
