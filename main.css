@@ -43,6 +43,9 @@ button {
 	margin: 30px;
 	margin-top: 48px;
 }
+.contact-button {
+	display: inline-block;
+}
 
 .contact-button a {
   cursor: pointer;
