@@ -4,10 +4,10 @@ window.onload = function(){
 	var btn = document.getElementById("contact-button")
 	var span = document.getElementsByClassName("close")[0];
 
-	btn.onClick = function() {
+	btn.onclick = function() {
 		modal.style.display = "block";
 	}
-	span.onClick = function() {
+	span.onclick = function() {
 		modal.style.display = "none";
 	}
 		
@@ -18,7 +18,7 @@ window.onload = function(){
 	}
 
 	var testbtn = document.getElementById("test-button")
-	testbtn.onClick = function() {
+	testbtn.onclick = function() {
 		testbtn.value= "It worked!";
 	}
 }
