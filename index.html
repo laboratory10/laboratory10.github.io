@@ -35,14 +35,14 @@
 			</div>
 		</div>
 		<footer>
-			<div class="contact-button">
+			<!--<div class="contact-button">
 				<a>Contact Us</a>
-			</div>
+			</div>-->
 			<!--<input type=button onClick="location.href='contact.html'" value="Contact Us">-->
-			<button id="test-button">Test</button>
+			<button class="contact-button" id="contact-button">Contact Us</button>
 			<script>
 				var modal = document.getElementById("contact-modal")
-				var btn = document.getElementsByClassName("contact-button")
+				var btn = document.getElementsById("contact-button")
 				var span = document.getElementsByClassName("close")[0];
 
 				btn.onclick = function() {
@@ -56,11 +56,6 @@
 					if (event.target == modal) {
 						modal.style.display = "none";
 					}
-				}
-				
-				var test = document.getElementById("test-button")
-				test.onclick = function() {
-					modal.style.display = "block"
 				}
 			</script>
 		</footer>
