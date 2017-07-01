@@ -13,3 +13,8 @@ window.onclick = function(event) {
 		modal.style.display = "none";
 	}
 }
+
+var testbtn = document.getElementById("test-button")
+testbtn.onClick = function() {
+	testbtn.value= "It worked!";
+}
