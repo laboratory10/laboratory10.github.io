@@ -39,6 +39,7 @@
 				<a>Contact Us</a>
 			</div>
 			<!--<input type=button onClick="location.href='contact.html'" value="Contact Us">-->
+			<button id="test-button">Test</button>
 			<script>
 				var modal = document.getElementById("contact-modal")
 				var btn = document.getElementsByClassName("contact-button")
@@ -55,6 +56,11 @@
 					if (event.target == modal) {
 						modal.style.display = "none";
 					}
+				}
+				
+				var test = document.getElementById("test-button")
+				test.onclick = function() {
+					modal.style.display = "block"
 				}
 			</script>
 		</footer>
