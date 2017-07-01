@@ -22,7 +22,4 @@ window.onload = function(){
 		testbtn.value= "It worked!";
 	}*/
 	
-	document.getElementById("test-button").onclick=function(){
-		document.getElementById("test-button").value = "It worked!"
-	}
 }
