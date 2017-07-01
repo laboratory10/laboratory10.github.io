@@ -16,7 +16,30 @@
 			<!--<div class="contact-button">
 				<a>Contact Us</a>
 			</div>-->
-			<input type=button onClick="location.href='contact.html'" value="Contact Us">
+			<!--<input type=button onClick="location.href='contact.html'" value="Contact Us">-->
+			<button id="contact-button">Contact Us</button>
+			<div id="contact-modal" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<form action="//forms.brace.io/laboratory10@gmail.com" method="post">
+						<div>
+							<label for="name">Name:</label>
+							<input type="text" id="name" name="user_name">
+						</div>
+						<div>
+							<label for="mail">E-mail:</label>
+							<input type="email" id="mail" name="user_mail">
+						</div>
+						<div>
+							<label for="msg">Message:</label>
+							<textarea id="msg" name="user_message"></textarea>
+						</div>
+						<div class="button">
+							<button type="submit">Send Message</button>
+						</div>
+					</form>
+				</div>
+			</div>
 		</footer>
 	</div>
 </html>
