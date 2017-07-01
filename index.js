@@ -1,6 +1,6 @@
 window.onload = function(){
 
-	var modal = document.getElementById("contact-modal")
+	/*var modal = document.getElementById("contact-modal")
 	var btn = document.getElementById("contact-button")
 	var span = document.getElementsByClassName("close")[0];
 
@@ -20,5 +20,9 @@ window.onload = function(){
 	var testbtn = document.getElementById("test-button")
 	testbtn.onclick = function() {
 		testbtn.value= "It worked!";
+	}*/
+	
+	document.getElementById("test-button").onclick=function(){
+		document.getElementById("test-button").value = "It worked!"
 	}
 }
