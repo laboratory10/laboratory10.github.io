@@ -35,19 +35,24 @@
 			</div>
 		</div>
 		<footer>
-			<!--<div class="contact-button">
+			<div class="contact-button" onclick="contactModalDisplay">
 				<a>Contact Us</a>
-			</div>-->
+			</div>
 			<!--<input type=button onClick="location.href='contact.html'" value="Contact Us">-->
-			<button id="contact-button">Contact Us</button>
+			<!--<button id="contact-button">Contact Us</button>-->
 			<script>
 				var modal = document.getElementById("contact-modal")
-				var btn = document.getElementById("contact-button")
+				<!--var btn = document.getElementsByClassName("contact-button")-->
 				var span = document.getElementsByClassName("close")[0];
-
-				btn.onclick = function() {
+				
+				<!--btn.onclick = function() {
+					<!--modal.style.display = "block";
+				<!--}
+				
+				function contactModalDisplay() {
 					modal.style.display = "block";
 				}
+				
 				span.onclick = function() {
 					modal.style.display = "none";
 				}
