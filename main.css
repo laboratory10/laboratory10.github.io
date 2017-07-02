@@ -34,7 +34,7 @@ p {
 	color: black;
 }
 
-button {
+.button {
     background-color: #101010;
     border: 1px solid #1ae7a6;
     color: #1ae7a6;
@@ -43,6 +43,7 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
+	margin:20px
 }
 
 .contact-button {
@@ -96,7 +97,7 @@ footer {
     border: 1px solid #101010;
 	background-color: #c8c8c8;
     width: 80%; /* Could be more or less, depending on screen size */
-	max-width: 700px
+	max-width: 500px
 }
 
 /* The Close Button */
@@ -117,14 +118,18 @@ footer {
 #name {
 	margin: 20px;
 	width:80%;
-	max-wiidth: 500px;
-	text-align:center;
+	max-wiidth: 300px;
+	text-align: center;
 }
 
 #email {
 	margin: 20px;
+	max-wiidth: 300px;
+	text-align: center;
 }
 
 #msg {
 	margin: 20px;
+	max-wiidth: 300px;
+	text-align: center;
 }
