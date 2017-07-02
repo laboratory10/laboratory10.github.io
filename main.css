@@ -20,6 +20,7 @@ p {
 	max-width: 1000px;
 	text-align:center;
 	float:center;
+	float:middle;
 }
 #main-wrapper{
 	box-sizing: border-box;
