@@ -34,35 +34,10 @@ p {
 	color: black;
 }
 
-.submit-button {
-    background-color: #101010;
-    border: 1px solid #1ae7a6;
-    color: #1ae7a6;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
-	margin-top: 48px;
-	margin-left: 30px;
-}
-
-.submit-button a {
-	cursor: pointer;
-	padding: 16px 32px;
-	border: 1px solid #1ae7a6;
-	color: #1ae7a6;
-	position:relative;
-	background-color: #101010;
-}
-
-.submit-button a:active {
-	top:2px;
-}
-
 .contact-button {
 	margin-top: 48px;
 	margin-left: 30px;
+	margin-bottom: 20px;
 	font-size: 24px;
 }
 
@@ -77,6 +52,11 @@ p {
 
 .contact-button a:active {
   top: 2px;
+}
+
+#submit-button {
+	margin-bottom: 20px;
+	font-size: 20px;
 }
 
 footer {
@@ -109,7 +89,7 @@ footer {
     border: 1px solid #101010;
 	background-color: #c8c8c8;
     width: 80%; /* Could be more or less, depending on screen size */
-	max-width: 500px
+	max-width: 800px
 }
 
 /* The Close Button */
@@ -133,17 +113,22 @@ label {
 	text-align:right;
 	padding-right: 20px;
 	vertical-align:top;
+	margin-top: 20px
 }
 
 #name {
-	margin-bottom: 20px;
+	margin-top: 20px;
+	width: 60%;
 }
 
 #email {
-	margin-bottom: 20px;
+	margin-top: 20px;
+	width: 60%;
 }
 
 #msg {
-	margin-bottom: 20px;
+	margin-top: 20px;
+	width: 60%;
 	resize: none;
+	height: 200px;
 }
