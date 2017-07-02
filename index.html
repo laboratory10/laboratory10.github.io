@@ -5,7 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="main.css"/>
 	</head>
 	<div id="main-wrapper">
-		<header>
+		<header id="header">
 			<img src="lab10.png"/>
 		</header>
 		<body>
@@ -33,7 +33,7 @@
 				</form>
 			</div>
 		</div>
-		<footer>
+		<footer id="footer">
 			<div class="contact-button" onclick="contactModalDisplay()">
 				<a>Contact Us</a>
 			</div>
@@ -59,8 +59,8 @@
 	</div>
 	<script>
 		var maincontent = document.getElementById("main-content");
-		var header = document.getElementsByClassName("header");
-		var footer = document.getElementsByClassName("footer");
+		var header = document.getElementById("header");
+		var footer = document.getElementById("footer");
 			
 		maincontent.style.marginTop = (maincontent.style.height - header.style.height - footer.style.height)/2 + "px";
 	</script>
