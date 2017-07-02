@@ -132,4 +132,5 @@ label {
 
 #msg {
 	margin-bottom: 20px;
+	resize: none;
 }
