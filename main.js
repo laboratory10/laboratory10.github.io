@@ -1,8 +1,6 @@
-//window.onload = function() {
-	var maintext = document.getElementById("main-content");
-	var container = document.getElementsByClassName("body");
+window.onload = function() {
 	
-	maintext.marginTop = ((container.height-150)-maintext.height)/2+"px";
-	maintext.value = ((container.height-150)-maintext.height)/2+"px";
+	maintext.marginTop = ((document.getElementsByClassName("body").height-150)-document.getElementById("main-content").height)/2+"px";
+	maintext.value = ((document.getElementsByClassName("body").height-150)-document.getElementById("main-content").height)/2+"px";
 	
-//}
+}
