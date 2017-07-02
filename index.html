@@ -63,7 +63,7 @@
 		var footer = document.getElementById("footer");
 		var maincontent = document.getElementById("main-content");
 			
-		//maincontent.style.marginTop = (document.getElementById("main-wrapper").height - document.getElementById("main-content").height - document.getElementById("header").height - document.getElementById("footer").height)/2 + "px";
-		document.getElementById("main-content").innerHTML = (document.getElementById("main-wrapper").height - document.getElementById("main-content").height - document.getElementById("header").height - document.getElementById("footer").height)/2 + "px";
+		maincontent.style.marginTop = (document.getElementById("main-wrapper").offsetHeight - document.getElementById("main-content").offsetHeight - document.getElementById("header").offsetHeight - document.getElementById("footer").offsetHeight)/2 + "px";
+		document.getElementById("main-content").innerHTML = (document.getElementById("main-wrapper").offsetHeight - document.getElementById("main-content").offsetHeight - document.getElementById("header").offsetHeight - document.getElementById("footer").offsetHeight)/2 + "px";
 	</script>
 </html>
