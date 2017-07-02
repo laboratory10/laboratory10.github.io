@@ -41,8 +41,6 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 24px;
-	margin: 30px;
-	margin-top: 48px;
 }
 
 .contact-button {
@@ -83,8 +81,7 @@ footer {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: #c8c8c8; /* Fallback color */
 }
 
 /* Modal Content/Box */
@@ -98,7 +95,7 @@ footer {
 
 /* The Close Button */
 .close {
-    color: #aaa;
+    color: #101010;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -106,7 +103,7 @@ footer {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: #1ae7a6;
     text-decoration: none;
     cursor: pointer;
 }
