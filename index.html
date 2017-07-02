@@ -11,6 +11,12 @@
 		<body>
 			<p id="main-content">At Laboratory 10, we're exploring new ways to interact with scientific data so that it is more accessible and used to educate a wider audience. We're just getting started, so check back soon to see what we have planned.</p>
 		</body>
+		<script>
+			var maincontent = document.getElementById("main-content");
+			var container = document.getElementsByClassName("body");
+			
+			maincontent.margin-top = ((container.height-150)-maincontent.height)/2 + "px";
+		</script>
 		<div id="contact-modal" class="modal">
 			<div class="modal-content">
 				<span class="close">&times;</span>
@@ -38,7 +44,7 @@
 				<a>Contact Us</a>
 			</div>
 			<script>
-				var modal = document.getElementById("contact-modal")
+				var modal = document.getElementById("contact-modal");
 				var span = document.getElementsByClassName("close")[0];
 				
 				function contactModalDisplay() {
