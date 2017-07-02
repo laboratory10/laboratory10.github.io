@@ -8,7 +8,6 @@ body{
 	padding: 0px;
 	height: 100%;
 	background-color: #c8c8c8;
-	text-align: center;
 }
 header {
 	text-align:center;
@@ -20,6 +19,7 @@ p {
 	-webkit-margin-after: 0em;
 	max-width: 1000px;
 	text-align:center;
+	float:center;
 }
 #main-wrapper{
 	box-sizing: border-box;
@@ -117,6 +117,7 @@ footer {
 #name {
 	margin: 20px;
 	width:80%;
+	max-wiidth: 500px;
 	text-align:center;
 }
 
