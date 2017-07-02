@@ -2,7 +2,7 @@
 	var maintext = document.getElementById("main-content");
 	var container = document.getElementsByClassName("body");
 	
-	maintext.style.marginTop = ((container.offsetHeight)-150)/2+"px";
-	maintext.value = ((container.offsetHeight)-150)/2+"px";
+	maintext.marginTop = ((container.height-150)-maintext.height)/2+"px";
+	maintext.value = ((container.height-150)-maintext.height)/2+"px";
 	
 //}
