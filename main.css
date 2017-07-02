@@ -19,8 +19,7 @@ p {
 	-webkit-margin-after: 0em;
 	max-width: 1000px;
 	text-align:center;
-	float:center;
-	float:middle;
+	margin: 0 auto;
 }
 #main-wrapper{
 	box-sizing: border-box;
@@ -119,18 +118,18 @@ footer {
 #name {
 	margin: 20px;
 	width:70%;
-	max-wiidth: 300px;
+	max-width: 300px;
 }
 
 #email {
 	margin: 20px;
 	width:70%;
-	max-wiidth: 300px;
+	max-width: 300px;
 }
 
 #msg {
 	align: top;
 	margin: 20px;
 	width:70%;
-	max-wiidth: 300px;
+	max-width: 300px;
 }
