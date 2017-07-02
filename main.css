@@ -32,6 +32,7 @@ p {
 }
 
 button {
+	font-family: "Courier New";
     background-color: #101010;
     border: 1px solid #1ae7a6;
     color: #1ae7a6;
@@ -39,7 +40,7 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
+    font-size: 24px;
 	margin: 30px;
 	margin-top: 48px;
 }
