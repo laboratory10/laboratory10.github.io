@@ -13,6 +13,12 @@ header {
 	text-align:center;
 	background-color: #505050;
 }
+
+#logo {
+	width: 100%;
+	max-width: 768;
+}
+
 p {
 	text-align: center;
 	-webkit-margin-before: 0em;
