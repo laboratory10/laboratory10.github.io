@@ -115,21 +115,22 @@ footer {
     cursor: pointer;
 }
 
+label {
+	display:inline-block;
+	width: 100px;
+	text-align:right;
+	padding-right: 20px;
+	vertical-align:top;
+}
+
 #name {
-	margin: 20px;
-	width:70%;
-	max-width: 300px;
+	margin-bottom: 20px;
 }
 
 #email {
-	margin: 20px;
-	width:70%;
-	max-width: 300px;
+	margin-bottom: 20px;
 }
 
 #msg {
-	align: top;
-	margin: 20px;
-	width:70%;
-	max-width: 300px;
+	margin-bottom: 20px;
 }
