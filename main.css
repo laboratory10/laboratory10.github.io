@@ -87,7 +87,7 @@ footer {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #101010;
-	background-color: #c8c8c8;
+	background-color: #c0c0c0;
     width: 80%; /* Could be more or less, depending on screen size */
 	max-width: 800px
 }
@@ -118,17 +118,17 @@ label {
 
 #name {
 	margin-top: 20px;
-	width: 60%;
+	width: 70%;
 }
 
 #email {
 	margin-top: 20px;
-	width: 60%;
+	width: 70%;
 }
 
 #msg {
 	margin-top: 20px;
-	width: 60%;
+	width: 70%;
 	resize: none;
 	height: 200px;
 }
