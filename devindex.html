@@ -1,63 +1,46 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>The Laboratory</title>
-		<link rel="stylesheet" type="text/css" href="main.css"/>
-	</head>
-	<div id="main-wrapper">
-		<header id="header">
-			<link rel="canonical" href="https://laboratory10.github.io/devlab">
-		</header>
-		<body>
-			<p id="main-content">t Laboratory 10, we're exploring new ways to interact with scientific data so that it is more accessible and used to educate a wider audience. We're just getting started, so check back soon to see what we have planned.</p>
-		</body>
-		<div id="contact-modal" class="modal">
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<form action="https://formspree.io/laboratory0010@gmail.com" method="post">
-					<div>
-						<label for="name">Name:</label>
-						<input type="text" id="name" name="user_name">
-					</div>
-					<div>
-						<label for="email">E-mail:</label>
-						<input type="email" id="email" name="user_email">
-					</div>
-					<div>
-						<label for="msg">Message:</label>
-						<textarea id="msg" name="user_message"></textarea>
-					</div>
-					<div id="submit-button" class="contact-button" onclick="this.parentNode.submit();">
-						<a>Send Message</a>
-					</div>
-				</form>
-			</div>
-		</div>
-		<footer id="footer">
-			<div class="contact-button" onclick="contactModalDisplay()">
-				<a>Contact Us</a>
-			</div>
-			<script>
-				var modal = document.getElementById("contact-modal");
-				var span = document.getElementsByClassName("close")[0];
-				
-				function contactModalDisplay() {
-					modal.style.display = "block";
-				}
-				
-				span.onclick = function() {
-					modal.style.display = "none";
-				}
-					
-				window.onclick = function(event) {
-					if (event.target == modal) {
-						modal.style.display = "none";
-					}
-				}
-			</script>
-		</footer>
-	</div>
-	<script>	
-		document.getElementById("main-content").style.marginTop = (document.getElementById("main-wrapper").offsetHeight - document.getElementById("main-content").offsetHeight - (document.getElementById("header").offsetHeight*2) - document.getElementById("footer").offsetHeight)/2 + "px";
-	</script>
+<head>
+  <title>Laboratory10</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<header class="container">
+  	<div class="row">
+      <h1 class="col-sm-4">Laboratory10</h1>
+      <nav class="col-sm-8 text-right">
+        <p>Contact</p>
+        </nav>
+    </div>
+  </header>
+  <section class="jumbotron">
+    <div class="container">
+      <div class="row text-center">
+        <h2>Access Science</h2>
+      </div>
+    </div>
+  </section>
+  <section class="container">
+    <div class="row">
+      <figure class="col-sm-6">
+        <p>About</p>
+        <img src="MarsLinkFeature.png">
+      </figure>
+      <figure class="col-sm-6">
+        <p>MarsLink</p>
+        <img src="MarsLinkFeature.png">
+      </figure>
+    </div>
+  </section>
+	<footer class="container">
+    <div class="row">
+      <p class="col-sm-4">&copy; 2017 Laboratory10<p>
+      <ul class="col-sm-8">
+      </ul>
+    </div>
+  </footer>
+</body>
 </html>
