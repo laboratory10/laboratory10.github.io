@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Laboratory</title>
+		<link rel="stylesheet" type="text/css" href="main.css"/>
+	</head>
+	<div id="main-wrapper">
+		<header id="header">
+			<link rel="canonical" href="https://laboratory10.github.io/devlab
+		</header>
+		<body>
+			<p id="main-content">At Laboratory 10, we're exploring new ways to interact with scientific data so that it is more accessible and used to educate a wider audience. We're just getting started, so check back soon to see what we have planned.</p>
+		</body>
+		<div id="contact-modal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<form action="https://formspree.io/laboratory0010@gmail.com" method="post">
+					<div>
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="user_name">
+					</div>
+					<div>
+						<label for="email">E-mail:</label>
+						<input type="email" id="email" name="user_email">
+					</div>
+					<div>
+						<label for="msg">Message:</label>
+						<textarea id="msg" name="user_message"></textarea>
+					</div>
+					<div id="submit-button" class="contact-button" onclick="this.parentNode.submit();">
+						<a>Send Message</a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<footer id="footer">
+			<div class="contact-button" onclick="contactModalDisplay()">
+				<a>Contact Us</a>
+			</div>
+			<script>
+				var modal = document.getElementById("contact-modal");
+				var span = document.getElementsByClassName("close")[0];
+				
+				function contactModalDisplay() {
+					modal.style.display = "block";
+				}
+				
+				span.onclick = function() {
+					modal.style.display = "none";
+				}
+					
+				window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+				}
+			</script>
+		</footer>
+	</div>
+	<script>	
+		document.getElementById("main-content").style.marginTop = (document.getElementById("main-wrapper").offsetHeight - document.getElementById("main-content").offsetHeight - (document.getElementById("header").offsetHeight*2) - document.getElementById("footer").offsetHeight)/2 + "px";
+	</script>
+</html>
