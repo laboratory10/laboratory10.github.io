@@ -109,12 +109,12 @@ figure p {
 	color: #1ae7a6;
 	text-shadow: none;
 	background-color: #303030;
+	float:right;
 }
 
 .btn-secondary:hover {
   cursor: pointer;
   text-decoration: underline;
-  color: #1ae7a6;
 }
 
 footer {
@@ -134,8 +134,4 @@ footer ul {
 footer li img {
   width: 32px;
   height: 32px;
-}
-
-#submit-button1 {
-	float: right;
 }
