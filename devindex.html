@@ -3,9 +3,9 @@
 <head>
 	<title>Laboratory10</title>
 	<meta charset="utf-8"/>
-	<<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="devmain.css">
 </head>
@@ -16,13 +16,13 @@
 	  
 		<nav class="col-sm-8 text-right">
 	  
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Contact</button>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">Contact</button>
 	
 		</nav>
     </div>
 	</header>
 	
-	<div class="modal fade" id="myModal" role="dialog">
+	<div class="modal fade" id="contactModal" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -43,13 +43,12 @@
 							<label for="msg">Message:</label>
 							<textarea id="msg" name="user_message"></textarea>
 						</div>
-						<div id="submit-button" class="contact-button" onclick="this.parentNode.submit();">
-							<a>Send Message</a>
-						</div>
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Send Message</button>
+					<div id="submit-button" class="contact-button" onclick="this.parentNode.submit();">
+						<a>Send Message</a>
+					</div>
 				</div>
 			</div>
 		</div>
