@@ -58,10 +58,13 @@ section .row img {
 
 .col-md-6 {
   margin: 0 0 30px;
+  border-style: solid;
+  border-color: white;
 }
 
-.col-md-6:hover{
-    border-style: solid;
+.col-md-6:hover
+.col-md-6:focus{
+    border-color: black;
     cursor: pointer;
 }
 
