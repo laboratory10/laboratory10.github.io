@@ -16,7 +16,7 @@
 	  
 		<nav class="col-sm-8 text-right">
 	  
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Open Modal</button>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Contact</button>
 	
 		</nav>
     </div>
@@ -30,7 +30,26 @@
 					<h4 class="modal-title">Send us a message!</h4>
 				</div>
 				<div class="modal-body">
-					<p>Test text in the modal.</p>
+					<form action="https://formspree.io/laboratory0010@gmail.com" method="post">
+						<div>
+							<label for="name">Name:</label>
+							<input type="text" id="name" name="user_name">
+						</div>
+						<div>
+							<label for="email">E-mail:</label>
+							<input type="email" id="email" name="user_email">
+						</div>
+						<div>
+							<label for="msg">Message:</label>
+							<textarea id="msg" name="user_message"></textarea>
+						</div>
+						<div id="submit-button" class="contact-button" onclick="this.parentNode.submit();">
+							<a>Send Message</a>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Send Message</button>
 				</div>
 			</div>
 		</div>
