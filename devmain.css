@@ -29,9 +29,9 @@ header p {
   margin: 0;
 }
 
-.col-md-8:hover,
-.col-md-8:focus{
-    text-decoration: underline;
+header p:hover,
+header p:focus{
+	text-decoration: underline;
     cursor: pointer;
 }
 
