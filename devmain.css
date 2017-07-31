@@ -99,9 +99,16 @@ figure p {
 }
 
 .btn-secondary {
-  background-color: #303030;
-  color: #1ae7a6;
-  margin: 0px 0px 0px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	padding: 0 20px;
+	margin: 0;
+	border-radius: 2px;
+	border: 0px;
+	color: #1ae7a6;
+	text-shadow: none;
+	background-color: #303030;
 }
 
 .btn-secondary:hover {
