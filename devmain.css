@@ -63,13 +63,16 @@ section .row img {
 }
 
 .col-md-6 {
-  margin: 0 0 30px;
-  border-top-style: solid;
-  border-top-color: white;
+  margin: 15 15 30px;
+}
+
+figure p {
+	border-top-style: solid;
+	border-top-color: white;
 }
 
 .col-md-6:hover,
-.col-md-6:focus{
+figure p:focus{
     border-top-color: black;
     cursor: pointer;
 }
