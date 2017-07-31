@@ -29,8 +29,7 @@ header p {
   margin: 0;
 }
 
-header p:hover,
-header p:focus{
+header p:hover{
 	text-decoration: underline;
     cursor: pointer;
 }
@@ -69,13 +68,12 @@ section .row img {
 
 figure p {
 	border-top-style: solid;
-	border-color: black;
+	border-color: red;
 }
 
-.col-md-6:hover,
-.col-md-6:focus{
+.col-md-6:hover figure p{
 	text-decoration: underline;
-	figure p border-color: red;
+	figure p border-color: black;
     cursor: pointer;
 }
 
