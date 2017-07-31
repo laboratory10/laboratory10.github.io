@@ -63,7 +63,8 @@ section .row img {
 }
 
 .col-md-6 {
-  margin: 25px 25px 30px;
+  margin: 0px 0px 30px;
+  paddubg: 25px;
 }
 
 figure p {
@@ -73,13 +74,9 @@ figure p {
 
 .col-md-6:hover,
 figure p:focus{
-    border-top-color: black;
-    cursor: pointer;
-}
-
-.col-md-6:hover,
-figure p:focus{
 	text-decoration: underline;
+	border-top-color: black;
+    cursor: pointer;
 }
 
 .btn.btn-primary {
