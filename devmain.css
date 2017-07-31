@@ -69,15 +69,13 @@ section .row img {
 
 figure p {
 	border-top-style: solid;
-	border-color: white;
+	border-color: black;
 }
 
 .col-md-6:hover,
 figure p:focus{
 	text-decoration: underline;
-	figure p {
-		border-color: black;
-	}
+	figure p border-color: red;
     cursor: pointer;
 }
 
