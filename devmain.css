@@ -64,14 +64,19 @@ section .row img {
 
 .col-md-6 {
   margin: 0 0 30px;
-  border-style: solid;
-  border-color: white;
+  border-top-style: solid;
+  border-top-color: white;
 }
 
 .col-md-6:hover,
 .col-md-6:focus{
-    border-color: black;
+    border-top-color: black;
     cursor: pointer;
+}
+
+figure p:hover,
+figure p:focus{
+	text-decoration: underline;
 }
 
 .btn.btn-primary {
