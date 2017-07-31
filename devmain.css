@@ -29,6 +29,12 @@ header p {
   margin: 0;
 }
 
+.col-md-8:hover,
+.col-md-8:focus{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .jumbotron {
   display: flex;
   align-items: center;
