@@ -81,11 +81,16 @@ figure p {
 }
 
 .btn.btn-primary {
-  border-radius: 0px;
-  border: 0px;
-  color: black;
-  text-shadow: none;
-  background-color: #ffffff;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	padding: 0 20px;
+	margin: 0;
+	border-radius: 0px;
+	border: 0px;
+	color: black;
+	text-shadow: none;
+	background-color: #ffffff;
 }
 
 .btn.btn-primary:hover {
