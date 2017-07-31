@@ -75,6 +75,7 @@ figure p {
 .col-md-6:hover,
 figure p:focus{
 	text-decoration: underline;
+	border-top-style: solid;
 	border-color: black;
     cursor: pointer;
 }
