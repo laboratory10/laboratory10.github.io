@@ -99,9 +99,14 @@ figure p {
 }
 
 .btn-secondary {
-  background-color: #1ae7a6;
-  color: black;
-  margin: 0 0 30px;
+  background-color: #303030;
+  color: #1ae7a6;
+  margin: 0px 0px 0px;
+}
+
+.btn-secondary:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 footer {
