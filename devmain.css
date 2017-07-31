@@ -60,6 +60,12 @@ section .row img {
   margin: 0 0 30px;
 }
 
+.col-md-6:hover,
+.col-md-6:focus {
+    border-style: solid;
+    cursor: pointer;
+}
+
 .btn.btn-primary {
   border-radius: 2px;
   border: 0px;
