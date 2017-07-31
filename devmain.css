@@ -60,8 +60,7 @@ section .row img {
   margin: 0 0 30px;
 }
 
-.col-md-6:hover,
-.col-md-6:focus {
+.col-md-6:hover{
     border-style: solid;
     cursor: pointer;
 }
