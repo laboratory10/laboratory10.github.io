@@ -89,8 +89,6 @@ figure p {
 }
 
 .btn.btn-primary:hover {
-  color: black;
-  background-color: silver;
   cursor: pointer;
   text-decoration: underline;
 }
