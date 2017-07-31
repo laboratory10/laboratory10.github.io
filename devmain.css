@@ -80,14 +80,14 @@ figure p {
 .btn.btn-primary {
   border-radius: 2px;
   border: 0px;
-  color: black;
+  color: #fbd1d5;
   text-shadow: none;
   background-color: #ffffff;
 }
 
 .btn.btn-primary:hover {
-  color: black;
-  background-color: gray;
+  color: #ffffff;
+  background-color: #fbd1d5;
 }
 
 .btn-secondary {
