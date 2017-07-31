@@ -81,7 +81,7 @@ figure p {
 }
 
 .btn.btn-primary {
-  border-radius: 2px;
+  border-radius: 0px;
   border: 0px;
   color: black;
   text-shadow: none;
@@ -90,7 +90,7 @@ figure p {
 
 .btn.btn-primary:hover {
   color: black;
-  background-color: gray;
+  background-color: silver;
 }
 
 .btn-secondary {
