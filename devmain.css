@@ -62,7 +62,7 @@ section .row img {
   border-color: white;
 }
 
-.col-md-6:hover
+.col-md-6:hover,
 .col-md-6:focus{
     border-color: black;
     cursor: pointer;
