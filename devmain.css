@@ -74,7 +74,7 @@ section .row img {
     cursor: pointer;
 }
 
-figure p:hover,
+.col-md-6:hover,
 figure p:focus{
 	text-decoration: underline;
 }
