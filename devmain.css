@@ -68,12 +68,12 @@ section .row img {
 
 figure p {
 	border-top-style: solid;
-	border-color: black;
+	border-color: white;
 }
 
 .col-md-6:hover p{
 	text-decoration: underline;
-	border-color: red;
+	border-color: black;
     cursor: pointer;
 }
 
