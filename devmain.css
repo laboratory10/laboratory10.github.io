@@ -14,7 +14,8 @@ footer .row {
   align-items: center;
 }
 
-header h1 {
+header h1,
+body h1 {
   font-weight: 700;
   margin: 0;
 }
