@@ -1,63 +1,124 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Laboratory10</title>
-		<link rel="stylesheet" type="text/css" href="main.css"/>
-	</head>
-	<div id="main-wrapper">
-		<header id="header">
-			<img id="logo" src="lab10.svg"/>
-		</header>
-		<body>
-			<p id="main-content">At Laboratory 10, we're exploring new ways to interact with scientific data so that it is more accessible and used to educate a wider audience. We're just getting started, so check back soon to see what we have planned.</p>
-		</body>
-		<div id="contact-modal" class="modal">
+<head>
+	<title>Laboratory10</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<header class="container">
+  	<div class="row">
+		<h1 class="col-sm-4">Laboratory10</h1>
+	  
+		<nav class="col-sm-8 text-right">
+	  
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">Contact</button>
+	
+		</nav>
+    </div>
+	</header>
+	
+	<div class="modal fade" id="contactModal" role="dialog">
+		<div class="modal-dialog">
 			<div class="modal-content">
-				<span class="close">&times;</span>
-				<form action="https://formspree.io/laboratory0010@gmail.com" method="post">
-					<div>
-						<label for="name">Name:</label>
-						<input type="text" id="name" name="user_name">
-					</div>
-					<div>
-						<label for="email">E-mail:</label>
-						<input type="email" id="email" name="user_email">
-					</div>
-					<div>
-						<label for="msg">Message:</label>
-						<textarea id="msg" name="user_message"></textarea>
-					</div>
-					<div id="submit-button" class="contact-button" onclick="this.parentNode.submit();">
-						<a>Send Message</a>
-					</div>
-				</form>
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h1 class="modal-title">Send us a message!</h1>
+				</div>
+				<div class="modal-body" style="padding-bottom:60px;">
+					<form action="https://formspree.io/laboratory0010@gmail.com" method="post">
+						<input type="hidden" name="_next" value="//laboratory10.github.io" />
+						<div class="form-group">
+							<label for="name" class="form-control-label">Name:</label>
+							<input type="text" class="form-control" id="name" name="user_name"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="email" class="form-control-label">E-mail:</label>
+							<input type="email" class="form-control" id="email" name="user_email"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="msg" class="form-control-label">Message:</label>
+							<textarea class="form-control" rows="7" id="msg" name="user_message"></textarea>
+						</div>
+						<button type="button" class="btn btn-secondary" onclick="this.parentNode.submit();">Send Message</button>
+					</form>
+				</div>
 			</div>
 		</div>
-		<footer id="footer">
-			<div class="contact-button" onclick="contactModalDisplay()">
-				<a>Contact Us</a>
-			</div>
-			<script>
-				var modal = document.getElementById("contact-modal");
-				var span = document.getElementsByClassName("close")[0];
-				
-				function contactModalDisplay() {
-					modal.style.display = "block";
-				}
-				
-				span.onclick = function() {
-					modal.style.display = "none";
-				}
-					
-				window.onclick = function(event) {
-					if (event.target == modal) {
-						modal.style.display = "none";
-					}
-				}
-			</script>
-		</footer>
 	</div>
-	<script>	
-		document.getElementById("main-content").style.marginTop = (document.getElementById("main-wrapper").offsetHeight - document.getElementById("main-content").offsetHeight - (document.getElementById("header").offsetHeight*2) - document.getElementById("footer").offsetHeight)/2 + "px";
-	</script>
+	
+	<div class="modal fade" id="aboutModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h1 class="modal-title">About Laboratory10</h1>
+				</div>
+				<div class="modal-body">
+					<p>Laboratory10 is a small team that is passionate about science and space exploration.
+						We are experimenting with ways to make engineering and scientific data more accessible and engaging 
+						to a wider audience. Accomplishing this goal would allow more people to benefit from research data 
+						and inspire the next generation of explorers. If you have ideas and want to work with us to make 
+						that happen, send us a message!
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="marsLinkModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h1 class="modal-title">MarsLink</h1>
+				</div>
+				<div class="modal-body">
+					<p>MarsLink was built with the goal to give people an easy way to stay in touch with their inner scientist 
+					as Curiosity studies Gale Crater on Mars.<br><br>MarsLink allows real-time Mars images from Curiosity to be 
+					used as the background for your device. When active, MarsLink will cycle through that day’s downloaded 
+					images every half hour.  An auto-update feature can be enabled to automatically check for new images from 
+					the rover every 24 hours. With both of these options active, you never need to open the app to see the 
+					latest images from Mars.<br><br>MarsLink is now available on Google Play and will soon be 
+					available for other platforms. Click the link below to see our store listing!</p>
+					<a href='https://play.google.com/store/apps/details?id=io.github.laboratory10.marslink&hl=en&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+						<img style="width:400px;display:block;margin:0 auto;" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
+					</a>
+					<p style="font-size:14px;">Google Play and the Google Play logo are trademarks of Google Inc.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+  
+  <section class="jumbotron">
+    <div class="container">
+      <div class="row text-center">
+		<img src="img/flask-outline.png" style="width:88px;height:88px;margin:0px;" align="left">
+		<h2>Discover mobile apps inspired by science and technology</h2>
+      </div>
+    </div>
+  </section>
+  <section class="container">
+    <div class="row">
+      <figure class="col-md-6" data-toggle="modal" data-target="#aboutModal">
+        <p>About</p>
+        <img src="img/lab10feature.svg">
+      </figure>
+      <figure class="col-md-6">
+        <p>MarsLink</p>
+        <img src="img/marslinkfeature.svg" data-toggle="modal" data-target="#marsLinkModal">
+      </figure>
+    </div>
+  </section>
+	<footer class="container">
+    <div class="row">
+      <p class="col-sm-4">&copy; 2017 Laboratory10<p>
+      <ul class="col-sm-8">
+      </ul>
+    </div>
+  </footer>
+</body>
 </html>

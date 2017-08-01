@@ -1,138 +1,146 @@
-html{
-	height: 100%;
-    margin: 0;
-    padding: 0;
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
 }
-body{
-	margin: 0px;
-	padding: 0px;
-	height: 100%;
-	background-color: #c8c8c8;
-}
+
 header {
-	text-align:center;
-	background-color: #505050;
+  padding: 20px 0;
 }
 
-#logo {
-	width: 100%;
-	max-width: 768px;
+header .row,
+footer .row {
+  display: flex;
+  align-items: center;
 }
 
-p {
-	text-align: center;
-	-webkit-margin-before: 0em;
-	-webkit-margin-after: 0em;
-	max-width: 1000px;
-	margin: 0 auto;
-}
-#main-wrapper{
-	box-sizing: border-box;
-	min-height: 100%;
-	padding-bottom: 150px;
-	position: relative;
-}
-#main-content {
-	font-family: "Courier New";
-	font-size: 32px;
-	color: black;
+header h1,
+body h1 {
+  font-weight: 700;
+  margin: 0;
 }
 
-.contact-button {
-	margin-top: 48px;
-	margin-left: 30px;
-	margin-bottom: 20px;
-	font-size: 24px;
+header nav {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.contact-button a {
-	cursor: pointer;
-	padding: 16px 32px;
-	border: 1px solid #1ae7a6;
-	color: #1ae7a6;
-	position:relative;
-	background-color: #101010;
+header p {
+  padding: 0 20px;
+  margin: 0;
 }
 
-.contact-button a:active {
-  top: 2px;
-}
-
-#submit-button {
-	margin-bottom: 20px;
-	font-size: 18px;
-}
-
-footer {
-	height: 150px;
-	background-color: #303030;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-    margin: 16% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #101010;
-	background-color: #c0c0c0;
-    width: 80%; /* Could be more or less, depending on screen size */
-	max-width: 800px
-}
-
-/* The Close Button */
-.close {
-    color: #101010;
-    float: right;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #1ae7a6;
-    text-decoration: none;
+header p:hover{
+	text-decoration: underline;
     cursor: pointer;
 }
 
-label {
-	display:inline-block;
-	width: 100px;
-	text-align:right;
-	padding-right: 20px;
-	vertical-align:top;
-	margin-top: 20px
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-image: url("img/background-2462431_1920.jpg");
+  background-size: cover;
+  color: #ffffff;
+  height: 500px;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
 }
 
-#name {
-	margin-top: 20px;
-	width: 70%;
+.jumbotron h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+  color: black;  
 }
 
-#email {
-	margin-top: 20px;
-	width: 70%;
+.jumbotron h3 {
+  margin: 0 0 20px;
+  color: #fff;
 }
 
-#msg {
-	margin-top: 20px;
-	width: 70%;
-	resize: none;
-	height: 200px;
+section .row img {
+  margin: 0 0 30px;
+  width: 100%;
+}
+
+.col-md-6 {
+  margin: 0px 0px 30px;
+  padding: 25px;
+}
+
+figure p {
+	border-top-style: solid;
+	border-color: white;
+}
+
+.col-md-6:hover p{
+	text-decoration: underline;
+	border-color: black;
+}
+
+.col-md-6:hover {
+    cursor: pointer;
+}
+
+.btn.btn-primary {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	padding: 0 20px;
+	margin: 0;
+	border-radius: 0px;
+	border: 0px;
+	color: black;
+	text-shadow: none;
+	background-color: #ffffff;
+}
+
+.btn.btn-primary:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.btn.btn-primary:focus {
+  outline: none;
+}
+
+.btn.btn-secondary {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	padding: 5px 20px;
+	margin: 0;
+	border-radius: 2px;
+	border: 0px;
+	color: #1ae7a6;
+	text-shadow: none;
+	background-color: #303030;
+	float:right;
+}
+
+.btn.btn-secondary:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.btn.btn-secondary:focus {
+  outline: none;
+}
+
+footer {
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li img {
+  width: 32px;
+  height: 32px;
 }
