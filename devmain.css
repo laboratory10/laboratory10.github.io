@@ -115,6 +115,7 @@ figure p {
 .btn-secondary:hover {
   cursor: pointer;
   text-decoration: underline;
+  color: #1ae7a6;
 }
 
 footer {
