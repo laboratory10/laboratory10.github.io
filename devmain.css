@@ -98,6 +98,10 @@ figure p {
   text-decoration: underline;
 }
 
+.btn.btn-primary:focus {
+  outline: none;
+}
+
 .btn.btn-secondary {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 600;
@@ -115,6 +119,10 @@ figure p {
 .btn.btn-secondary:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.btn.btn-secondary:focus {
+  outline: none;
 }
 
 footer {
