@@ -1,0 +1,155 @@
+<?xml version="1.0" standalone="yes"?>
+
+<svg version="1.1" viewBox="0.0 0.0 1024.0 500.0" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g>
+        <title>background</title>
+        <rect fill="#021728" id="canvas_background" height="500" width="1024" y="-1" x="-1"/>
+        <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+            <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+        </g>
+    </g>
+    <!--minute and second arc-->
+    <circle cx="512" cy="250" r="240" style="stroke:#194c6d;stroke-width:8;stroke-opacity:1.0"/>
+    <line x1="512" y1="250" x2="780" y2="20" style="stroke:#021728;stroke-width:20;stroke-opacity:1.0"/>
+    <circle cx="512" cy="250" r="220" style="stroke:#194c6d;stroke-width:8;stroke-opacity:1.0"/>
+    <line x1="512" y1="250" x2="330" y2="380" style="stroke:#021728;stroke-width:20;stroke-opacity:1.0"/>
+
+    <!--<polygon points="512,-50 252,100 252,400 512,550 772,400 772,100" style="fill:#000815;stroke:#194c6d;stroke-width:8;fill-opacity:0.7;stroke-opacity:1.0"/>-->
+    <polyline points="320,255 704,255" style="stroke:#1ae732;stroke-width:2;fill-opacity:0.0"/>
+    <text text-anchor="middle" x="512" y="240" fill="#1c577c" font-size="50" font-family="arial" font-weight="bold">Project Martian</text>
+    <text text-anchor="middle" x="510" y="290" fill="#a92f39" font-size="28" font-family="arial" font-weight="bold">FitbitOS&#8482; Watch Face</text>
+
+    <g id="marsInfo">
+      <text id="mslLabel" font-size="26" font-family="arial" font-weight="bold" text-anchor="middle" fill="#a92f39" x="50%" y="70">MARS-MSL</text>
+      <text id="lightTime" font-size="26" font-family="arial" font-weight="bold" text-anchor="middle" fill="#a92f39" x="50%" y="100">NOT</text>
+      <text id="marsEarthDistance" font-size="26" font-family="arial" font-weight="bold" text-anchor="middle" fill="#a92f39" x="50%" y="130">AVAILABLE</text>
+      <text id="curiosityClock" font-size="26" font-family="arial" font-weight="bold" text-anchor="middle" fill="#a92f39" x="50%" y="160"/>
+      <text id="curiositySol" font-size="26" font-family="arial" font-weight="bold" text-anchor="middle" fill="#a92f39" x="50%" y="190"/>
+    </g>
+
+    <g id="earthInfo">
+      <text id="earthLabel" font-size="26" font-family="arial" font-weight="bold" text-anchor="middle" fill="#1978aa" x="50%" y="340">EARTH</text>
+      <text id="earthDate" font-size="26" font-family="arial" font-weight="bold" text-anchor="middle" fill="#1978aa" x="50%" y="370"/>
+      <text id="earthClock" font-size="26" font-family="arial" font-weight="bold" text-anchor="middle" fill="#1978aa" x="50%" y="400"/>
+    </g>
+
+	<!--white arrow - exported from a google drawing-->
+	<clipPath id="p.0"><path d="m0 0l1024.0 0l0 500.0l-1024.0 0l0 -500.0z" clip-rule="nonzero"></path></clipPath><g clip-path="url(#p.0)"><path fill="#000000" fill-opacity="0.0" d="m0 0l1024.0 0l0 500.0l-1024.0 0z" fill-rule="evenodd"></path><path fill="#000000" fill-opacity="0.0" d="m920.2887 396.28873l103.7113 0l0 103.7113l-103.7113 0z" fill-rule="evenodd"></path><g transform="matrix(0.40512230971128604 0.0 0.0 0.40512230971128604 920.2887149606299 396.2887149606299)"><clipPath id="p.1"><path d="m0 0l256.0 0l0 256.0l-256.0 0z" clip-rule="evenodd"></path></clipPath><image clip-path="url(#p.1)" fill="#000" width="256.0" height="256.0" x="0.0" y="0.0" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAADKUlEQVR42u3csQnCYBSFUXvBCVwhTcBRsoE72LqajU4THOH3CdpHFIL/PQfeAtH7xcrNBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAfrbVd3eBJQOb4b3X3uoMnAnnjfxMBCB2/CED4+EUAwscvAhA+fhGA8PGLAISPXwQgfPwiAOHjFwEIH78IQPj4RQDCxy8CED5+EYDw8YsAhI9fBCB8/CIA4eMXAQgfvwhA+PhFAMLHLwIQPn4RgPDxiwCEj18EIHz8IgBfBODY+jHXjT5V+CwCp44i4JcAiIAIgAgAIgCIACACgAgAIgCIACACgAgAIgCIACACgAgAIgCIACACIAIiACIgAiACIgAiIAIgAiIAIiACIAIiACIgAiACIgAiIAIgAiIAIiACIAIiACIgAiACIgAiIAIgAiIAIiAC/PZLuK+b3Gp37SgCc91oVf8VgKmBXwICACIgACACAgAiIAAgAgIAIiAAIAICACIgACACAgAiIAAgAgIAIiAAIAICACIgACACAgAiIAAgAgIAIiAAIAICACIgACACAgACIAAYv/ELAMaPAGD8CADGjwBg/AgAxo8AYPwIAMaPAGD8CADGjwBg/AgAxo8AYPwIAMaPAGD8AgDGLwBg/AIAxi8AYPwCAMbfcwD2rwi4de7a0fjnutGqYFl8z978YPzGD8Zv/GD8xg/Gb/xg/MYPxm/8YPzGD8Zv/GD8xg/Gb/xg/MYPxm/8YPzGD8Zv/GD8xg/Gb/xg/MYPxm/8YPyA8QPGDxg/YPxg/MYPxm/8YPzGD8Zv/GD8xg/Gb/xg/MYPxm/8YPzGD8Zv/GD8xg/Gb/yw0viPHY1/rht9qrA8ALu6mzc/iIDxgwgYP4iA8UNcBLZ1F+MHETB+EAHjBxEwfhAB4wcRMH4QAeMHETB+EAHjBxEwfhAB4wcRMH4QAeMHETB+EAHjh/QIGD+ERsD4ITQCxg+hETB+CI2A8UNoBIwfQiPw/LfhwZMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOvQA6N2aYHkyo8wAAAAASUVORK5CYII="></image></g></g>
+
+  <script type="text/javascript">
+    <![CDATA[
+    let curiosityClock = document.getElementById("curiosityClock");
+    let curiositySol = document.getElementById("curiositySol");
+    let earthDate = document.getElementById("earthDate");
+    let earthClock = document.getElementById("earthClock");
+
+    let taiOffset = 37;
+    let lastTaiUpdate = "1 January 2017";
+
+    var weekArray = new Array(7);
+    weekArray[0] = "SUN";
+    weekArray[1] = "MON";
+    weekArray[2] = "TUE";
+    weekArray[3] = "WED";
+    weekArray[4] = "THU";
+    weekArray[5] = "FRI";
+    weekArray[6] = "SAT";
+
+    var monthArray = new Array(12);
+    monthArray[0] = "JAN";
+    monthArray[1] = "FEB";
+    monthArray[2] = "MAR";
+    monthArray[3] = "APR";
+    monthArray[4] = "MAY";
+    monthArray[5] = "JUN";
+    monthArray[6] = "JUL";
+    monthArray[7] = "AUG";
+    monthArray[8] = "SEPT";
+    monthArray[9] = "OCT";
+    monthArray[10] = "NOV";
+    monthArray[11] = "DEC";
+
+    function inside24(n) {
+      if (n < 0) {
+    	  n += 24;
+      } else if (n >= 24) {
+    	  n -= 24;
+      }
+      return n;
+    }
+
+    function convertHoursToHoursMinutes(h) {
+      var x = h * 3600;
+      var hh = Math.floor(x / 3600);
+      if (hh < 10) hh = "0" + hh;
+      var y = x % 3600;
+      var mm = Math.floor(y / 60);
+      if (mm < 10) mm = "0" + mm;
+      return hh + ":" + mm
+    }
+
+    function tick() {
+      let today = new Date();
+      var hours = 0;
+      var mins = 0;
+      var secs = 0;
+
+      if (today.getHours() > 12) {
+        hours = today.getHours()-12;
+      } else if (today.getHours() == 0) {
+        hours = 12;
+      } else {
+        hours = today.getHours();
+      }
+
+      if (String(today.getMinutes()).length == 1) {
+        mins = "0" + today.getMinutes()
+      } else {
+        mins = today.getMinutes()
+      }
+
+      if (String(today.getSeconds()).length == 1) {
+        secs = "0" + today.getSeconds()
+      } else {
+        secs = today.getSeconds()
+      }
+      let dayNumber = today.getDate();
+      let dayOfWeek = weekArray[today.getDay()];
+      let month = monthArray[today.getMonth()];
+
+      //calculate curiosity time
+      let jd_ut = 2440587.5 + (today.getTime() / 8.64E7);
+      let jd_tt = jd_ut + (taiOffset + 32.184) / 86400;
+      let j2000 = jd_tt - 2451545.0;
+
+      let msd = (((j2000 - 4.5) / 1.027491252) + 44796.0 - 0.00096);
+      let mtc = (24 * msd) % 24;
+
+      let curiosityLocalMeanSolarTime = inside24(mtc - 222.6 * 24 / 360);
+      let curiositySolValue = Math.floor(msd - (360 - 137.4) / 360) - 49268;
+      /*
+      let currentMarsDistance = util.getMarsDistance(today.getTime());
+      if (currentMarsDistance != -1) {
+
+        var lightTimeInSeconds = Math.round(currentMarsDistance*1000/299792458) //div by speed of light
+
+        lightTime.text = Math.floor(lightTimeInSeconds/60) + " M " + Math.round(lightTimeInSeconds%60) + " S";
+        if (isMiles == true) {
+          marsEarthDistance.text = Math.round(currentMarsDistance*0.6214).toLocaleString() + " M";
+        } else {
+          marsEarthDistance.text = Math.round(currentMarsDistance).toLocaleString() + " KM";
+        }
+      }
+      */
+      //set values for the clock
+      earthDate.innerHTML = dayOfWeek + " " + dayNumber + " " + month;
+      earthClock.innerHTML = hours + ":" + mins + ":" + secs;
+
+      curiosityClock.innerHTML = "M" + convertHoursToHoursMinutes(curiosityLocalMeanSolarTime);
+      curiositySol.innerHTML = "SOL " + curiositySolValue;
+    }
+
+    setInterval(function () {tick();}, 1000)
+    ]]>
+  </script>
+</svg>
