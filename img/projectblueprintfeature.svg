@@ -1,57 +1,51 @@
 <?xml version="1.0" standalone="yes"?>
 
-<svg version="1.1" viewBox="0.0 0.0 1024.0 500.0" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g>
-        <title>background</title>
-        <rect fill="#021728" id="canvas_background" height="500" width="1024" y="-1" x="-1"/>
-        <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
-            <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
-        </g>
-    </g> 
-    <g style="stroke:rgb(4,42,73);stroke-width:2">
-        <!--vertical grid lines-->
-        <line x1="39" y1="1" x2="39" y2="497"/>
-        <line x1="84" y1="1" x2="84" y2="497" stroke-width="5"/>
-        <line x1="129" y1="1" x2="129" y2="497"/>
-        <line x1="174" y1="1" x2="174" y2="497"/>
-        <line x1="219" y1="1" x2="219" y2="497" stroke-width="5"/>
-        <line x1="264" y1="1" x2="264" y2="497"/>
-        <line x1="309" y1="1" x2="309" y2="497"/>
-        <line x1="354" y1="1" x2="354" y2="497" stroke-width="5"/>
-        <line x1="399" y1="1" x2="399" y2="497"/>
-        <line x1="444" y1="1" x2="444" y2="497"/>
-        <line x1="489" y1="1" x2="489" y2="497" stroke-width="5"/>
-        <line x1="534" y1="1" x2="534" y2="497"/>
-        <line x1="579" y1="1" x2="579" y2="497"/>
-        <line x1="624" y1="1" x2="624" y2="497" stroke-width="5"/>
-        <line x1="669" y1="1" x2="669" y2="497"/>
-        <line x1="714" y1="1" x2="714" y2="497"/>
-        <line x1="759" y1="1" x2="759" y2="497" stroke-width="5"/>
-        <line x1="804" y1="1" x2="804" y2="497"/>
-        <line x1="849" y1="1" x2="849" y2="497"/>
-        <line x1="894" y1="1" x2="894" y2="497" stroke-width="5"/>
-        <line x1="939" y1="1" x2="939" y2="497"/>
-        <line x1="984" y1="1" x2="984" y2="497"/>
-        <!--horizontal grid lines-->
-        <line x1="1" y1="35" x2="1021" y2="35" stroke-width="5"/>
-        <line x1="1" y1="80" x2="1021" y2="80"/>
-        <line x1="1" y1="125" x2="1021" y2="125"/>
-        <line x1="1" y1="170" x2="1021" y2="170" stroke-width="5"/>
-        <line x1="1" y1="215" x2="1021" y2="215"/>
-        <line x1="1" y1="260" x2="1021" y2="260"/>
-        <line x1="1" y1="305" x2="1021" y2="305" stroke-width="5"/>
-        <line x1="1" y1="350" x2="1021" y2="350"/>
-        <line x1="1" y1="395" x2="1021" y2="395"/>
-        <line x1="1" y1="440" x2="1021" y2="440" stroke-width="5"/>
-        <line x1="1" y1="485" x2="1021" y2="485"/>
-    </g>
-    <!--main hex-->
-    <polygon points="512,-50 252,100 252,400 512,550 772,400 772,100" style="fill:#000815;stroke:#194c6d;stroke-width:8;fill-opacity:0.7;stroke-opacity:1.0"/>
-    <polyline points="320,255 704,255" style="stroke:#1ae732;stroke-width:2;fill-opacity:0.0"/>
-    <text text-anchor="middle" x="512" y="235" fill="#1c577c" font-size="60" font-family="arial" font-weight="bold">Project Blueprint</text>
-    <text text-anchor="middle" x="510" y="290" fill="#a92f39" font-size="28" font-family="arial" font-weight="bold">FitbitOS&#8482; Watch Face</text>
+<svg version="1.1" viewBox="0 0 1024 500" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect fill="#021728" id="canvas_background" height="500" width="1024" y="0" x="0"/>
+  <g style="stroke:rgb(4,42,73);stroke-width:2">
+    <!--vertical grid lines-->
+    <line x1="39" y1="1" x2="39" y2="497"/>
+    <line x1="84" y1="1" x2="84" y2="497" stroke-width="5"/>
+    <line x1="129" y1="1" x2="129" y2="497"/>
+    <line x1="174" y1="1" x2="174" y2="497"/>
+    <line x1="219" y1="1" x2="219" y2="497" stroke-width="5"/>
+    <line x1="264" y1="1" x2="264" y2="497"/>
+    <line x1="309" y1="1" x2="309" y2="497"/>
+    <line x1="354" y1="1" x2="354" y2="497" stroke-width="5"/>
+    <line x1="399" y1="1" x2="399" y2="497"/>
+    <line x1="444" y1="1" x2="444" y2="497"/>
+    <line x1="489" y1="1" x2="489" y2="497" stroke-width="5"/>
+    <line x1="534" y1="1" x2="534" y2="497"/>
+    <line x1="579" y1="1" x2="579" y2="497"/>
+    <line x1="624" y1="1" x2="624" y2="497" stroke-width="5"/>
+    <line x1="669" y1="1" x2="669" y2="497"/>
+    <line x1="714" y1="1" x2="714" y2="497"/>
+    <line x1="759" y1="1" x2="759" y2="497" stroke-width="5"/>
+    <line x1="804" y1="1" x2="804" y2="497"/>
+    <line x1="849" y1="1" x2="849" y2="497"/>
+    <line x1="894" y1="1" x2="894" y2="497" stroke-width="5"/>
+    <line x1="939" y1="1" x2="939" y2="497"/>
+    <line x1="984" y1="1" x2="984" y2="497"/>
+    <!--horizontal grid lines-->
+    <line x1="1" y1="35" x2="1021" y2="35" stroke-width="5"/>
+    <line x1="1" y1="80" x2="1021" y2="80"/>
+    <line x1="1" y1="125" x2="1021" y2="125"/>
+    <line x1="1" y1="170" x2="1021" y2="170" stroke-width="5"/>
+    <line x1="1" y1="215" x2="1021" y2="215"/>
+    <line x1="1" y1="260" x2="1021" y2="260"/>
+    <line x1="1" y1="305" x2="1021" y2="305" stroke-width="5"/>
+    <line x1="1" y1="350" x2="1021" y2="350"/>
+    <line x1="1" y1="395" x2="1021" y2="395"/>
+    <line x1="1" y1="440" x2="1021" y2="440" stroke-width="5"/>
+    <line x1="1" y1="485" x2="1021" y2="485"/>
+  </g>
+  <!--main hex-->
+  <polygon points="512,-50 252,100 252,400 512,550 772,400 772,100" style="fill:#000815;stroke:#194c6d;stroke-width:8;fill-opacity:0.7;stroke-opacity:1.0"/>
+  <polyline points="320,255 704,255" style="stroke:#1ae732;stroke-width:2;fill-opacity:0"/>
+  <text text-anchor="middle" x="512" y="235" fill="#1c577c" font-size="60" font-family="arial" font-weight="bold">Project Blueprint</text>
+  <text text-anchor="middle" x="510" y="290" fill="#a92f39" font-size="28" font-family="arial" font-weight="bold">FitbitOS&#8482; Watch Face</text>
 
 	<!--white arrow - exported from a google drawing-->
 	<clipPath id="p.0"><path d="m0 0l1024.0 0l0 500.0l-1024.0 0l0 -500.0z" clip-rule="nonzero"></path></clipPath><g clip-path="url(#p.0)"><path fill="#000000" fill-opacity="0.0" d="m0 0l1024.0 0l0 500.0l-1024.0 0z" fill-rule="evenodd"></path><path fill="#000000" fill-opacity="0.0" d="m920.2887 396.28873l103.7113 0l0 103.7113l-103.7113 0z" fill-rule="evenodd"></path><g transform="matrix(0.40512230971128604 0.0 0.0 0.40512230971128604 920.2887149606299 396.2887149606299)"><clipPath id="p.1"><path d="m0 0l256.0 0l0 256.0l-256.0 0z" clip-rule="evenodd"></path></clipPath><image clip-path="url(#p.1)" fill="#000" width="256.0" height="256.0" x="0.0" y="0.0" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAADKUlEQVR42u3csQnCYBSFUXvBCVwhTcBRsoE72LqajU4THOH3CdpHFIL/PQfeAtH7xcrNBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAfrbVd3eBJQOb4b3X3uoMnAnnjfxMBCB2/CED4+EUAwscvAhA+fhGA8PGLAISPXwQgfPwiAOHjFwEIH78IQPj4RQDCxy8CED5+EYDw8YsAhI9fBCB8/CIA4eMXAQgfvwhA+PhFAMLHLwIQPn4RgPDxiwCEj18EIHz8IgBfBODY+jHXjT5V+CwCp44i4JcAiIAIgAgAIgCIACACgAgAIgCIACACgAgAIgCIACACgAgAIgCIACACIAIiACIgAiACIgAiIAIgAiIAIiACIAIiACIgAiACIgAiIAIgAiIAIiACIAIiACIgAiACIgAiIAIgAiIAIiAC/PZLuK+b3Gp37SgCc91oVf8VgKmBXwICACIgACACAgAiIAAgAgIAIiAAIAICACIgACACAgAiIAAgAgIAIiAAIAICACIgACACAgAiIAAgAgIAIiAAIAICACIgACACAgACIAAYv/ELAMaPAGD8CADGjwBg/AgAxo8AYPwIAMaPAGD8CADGjwBg/AgAxo8AYPwIAMaPAGD8AgDGLwBg/AIAxi8AYPwCAMbfcwD2rwi4de7a0fjnutGqYFl8z978YPzGD8Zv/GD8xg/Gb/xg/MYPxm/8YPzGD8Zv/GD8xg/Gb/xg/MYPxm/8YPzGD8Zv/GD8xg/Gb/xg/MYPxm/8YPyA8QPGDxg/YPxg/MYPxm/8YPzGD8Zv/GD8xg/Gb/xg/MYPxm/8YPzGD8Zv/GD8xg/Gb/yw0viPHY1/rht9qrA8ALu6mzc/iIDxgwgYP4iA8UNcBLZ1F+MHETB+EAHjBxEwfhAB4wcRMH4QAeMHETB+EAHjBxEwfhAB4wcRMH4QAeMHETB+EAHjh/QIGD+ERsD4ITQCxg+hETB+CI2A8UNoBIwfQiPw/LfhwZMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOvQA6N2aYHkyo8wAAAAASUVORK5CYII="></image></g></g>
-	
+
 </svg>

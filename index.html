@@ -13,7 +13,8 @@
 	<body>
 		<header class="container">
 			<div class="row">
-				<h1 class="col-sm-4">Laboratory10</h1>
+				<h1 class="col-sm-4">Laboratory10<img src="img/flask-outline.png" style="width:40px;height:40px;margin:0px;" align="left"></h1>
+
 				<nav class="col-sm-8 text-right">
 					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">Contact</button>
 				</nav>
@@ -142,7 +143,24 @@
 				</div>
 			</div>
 		</div>
+		<!--<section class="jumbotron" style="background-image: url(img/marslinkorbitalfeature.svg)">-->
 		<section class="jumbotron">
+
+			<svg version="1.1" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<defs>
+					<radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+						<stop offset="70%" style="stop-color:#021728;stop-opacity:0" />
+						<stop offset="100%" style="stop-color:#021728;stop-opacity:1" />
+					</radialGradient>
+				</defs>
+				<rect fill="#000000" id="canvas_background" height="500" width="100%" y="0"/>
+				<rect fill="#ffffff" id="tes" height="50" width="50" x="50%" y="50%" transform="translate(0, -250)"/>
+				<rect fill="#ffffff" id="tes" height="50" width="50" x="50%" y="50%" transform="translate(-25, 0)"/>
+				<rect fill="#ffffff" id="tes" height="50" width="50" x="50%" y="50%" transform="translate(50, 0)"/>
+				<rect fill="#ffffff" id="tes" height="50" width="50" x="50%" y="50%" transform="translate(-100, 0)"/>
+				<rect fill="url(#grad1)" id="fade" height="500" width="1500" y="0" x="50%" transform="translate(-750, 0)"/>
+			</svg>
+<!--
 			<div class="container">
 				<div class="row text-center">
 					<img src="img/flask-outline.png" style="width:88px;height:88px;margin:0px;" align="center">
@@ -151,6 +169,30 @@
 					<h2>DISCOVER APPS INSPIRED BY SCIENCE AND TECHNOLOGY</h2>
 				</div>
 			</div>
+		</section>-->
+		<!--<div align="center">
+		<svg version="1.1" height="500" width="1024" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<rect fill="#021728" id="canvas_background" height="500" width="1024" y="0" x="0"/>
+
+			<polyline points="340,260 685,260" style="stroke:#1ae732;stroke-width:2;fill-opacity:0.0"/>
+			<text text-anchor="middle" x="512" y="245" fill="#1c577c" font-size="50" font-family="arial" font-weight="bold">Project Martian</text>
+			<text text-anchor="middle" x="510" y="295" fill="#a92f39" font-size="28" font-family="arial" font-weight="bold">FitbitOS&#8482; Watch Face</text>
+
+		</svg>
+	</div>
+		<section class="container">
+			<div class="row">
+				<figure class="col-md-12" height="500" style="padding:0;">
+					<svg version="1.1" viewBox="0 0 1024 500" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-toggle="modal" data-target="#martianModal">
+						<rect fill="#021728" id="canvas_background" height="500" width="1024" y="0" x="0"/>
+
+						<polyline points="340,260 685,260" style="stroke:#1ae732;stroke-width:2;fill-opacity:0.0"/>
+						<text text-anchor="middle" x="512" y="245" fill="#1c577c" font-size="50" font-family="arial" font-weight="bold">Project Martian</text>
+						<text text-anchor="middle" x="510" y="295" fill="#a92f39" font-size="28" font-family="arial" font-weight="bold">FitbitOS&#8482; Watch Face</text>
+
+					</svg>
+				</figure>
+			</div>-->
 		</section>
 		<section class="container">
 			<div class="row">
@@ -160,37 +202,26 @@
 				</figure>
 				<figure class="col-md-6">
 					<p>Project Martian</p>
-					<svg version="1.1" viewBox="0.0 0.0 1024.0 500.0" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-toggle="modal" data-target="#martianModal">
-					    <g>
-					        <title>background</title>
-					        <rect fill="#021728" id="canvas_background" height="500" width="1024" y="-1" x="-1"/>
-					        <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
-					            <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
-					        </g>
-					    </g>
-					    <!--minute and second arc-->
-					    <circle cx="512" cy="250" r="220" style="stroke:#194c6d;stroke-width:8;stroke-opacity:1.0"/>
-					    <line id="minuteArc" x1="512" y1="250" x2="512" y2="30" style="stroke:#021728;stroke-width:20;stroke-opacity:1.0" transform="rotate(25 512 250)"/>
-					    <circle cx="512" cy="250" r="200" style="stroke:#194c6d;stroke-width:8;stroke-opacity:1.0"/>
-					    <line id="hourArc" x1="512" y1="250" x2="512" y2="50" style="stroke:#021728;stroke-width:20;stroke-opacity:1.0" transform="rotate(240 512 250)"/>
+					<svg version="1.1" viewBox="0 0 1024 500" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-toggle="modal" data-target="#martianModal">
+						<rect fill="#021728" id="canvas_background" height="500" width="1024" y="0" x="0"/>
 
-					    <!--<polygon points="512,-50 252,100 252,400 512,550 772,400 772,100" style="fill:#000815;stroke:#194c6d;stroke-width:8;fill-opacity:0.7;stroke-opacity:1.0"/>-->
-					    <polyline points="340,260 685,260" style="stroke:#1ae732;stroke-width:2;fill-opacity:0.0"/>
-					    <text text-anchor="middle" x="512" y="245" fill="#1c577c" font-size="50" font-family="arial" font-weight="bold">Project Martian</text>
-					    <text text-anchor="middle" x="510" y="295" fill="#a92f39" font-size="28" font-family="arial" font-weight="bold">FitbitOS&#8482; Watch Face</text>
+				    <circle cx="512" cy="250" r="220" style="stroke:#194c6d;stroke-width:8;stroke-opacity:1.0"/>
+				    <line id="minuteArc" x1="512" y1="250" x2="512" y2="30" style="stroke:#021728;stroke-width:20;stroke-opacity:1.0" transform="rotate(25 512 250)"/>
+				    <circle cx="512" cy="250" r="200" style="stroke:#194c6d;stroke-width:8;stroke-opacity:1.0"/>
+				    <line id="hourArc" x1="512" y1="250" x2="512" y2="50" style="stroke:#021728;stroke-width:20;stroke-opacity:1.0" transform="rotate(240 512 250)"/>
 
-					    <g id="marsInfo">
-					      <text id="mslLabel" font-size="30" font-family="arial" font-weight="bold" text-anchor="middle" fill="#a92f39" x="50%" y="100"/>
-					      <text id="marsEarthDistance" font-size="30" font-family="arial" font-weight="bold" text-anchor="middle" fill="#a92f39" x="50%" y="130"/>
-					      <text id="curiosityClock" font-size="30" font-family="arial" font-weight="bold" text-anchor="middle" fill="#a92f39" x="50%" y="160"/>
-					      <text id="curiositySol" font-size="30" font-family="arial" font-weight="bold" text-anchor="middle" fill="#a92f39" x="50%" y="190"/>
-					    </g>
+				    <polyline points="340,260 685,260" style="stroke:#1ae732;stroke-width:2;fill-opacity:0.0"/>
+				    <text text-anchor="middle" x="512" y="245" fill="#1c577c" font-size="50" font-family="arial" font-weight="bold">Project Martian</text>
+				    <text text-anchor="middle" x="510" y="295" fill="#a92f39" font-size="28" font-family="arial" font-weight="bold">FitbitOS&#8482; Watch Face</text>
 
-					    <g id="earthInfo">
-					      <text id="earthLabel" font-size="30" font-family="arial" font-weight="bold" text-anchor="middle" fill="#1978aa" x="50%" y="345"/>
-					      <text id="earthDate" font-size="30" font-family="arial" font-weight="bold" text-anchor="middle" fill="#1978aa" x="50%" y="375"/>
-					      <text id="earthClock" font-size="30" font-family="arial" font-weight="bold" text-anchor="middle" fill="#1978aa" x="50%" y="405"/>
-					    </g>
+						<text id="mslLabel" font-size="30" font-family="arial" font-weight="bold" text-anchor="middle" fill="#a92f39" x="50%" y="100"/>
+						<text id="marsEarthDistance" font-size="30" font-family="arial" font-weight="bold" text-anchor="middle" fill="#a92f39" x="50%" y="130"/>
+						<text id="curiosityClock" font-size="30" font-family="arial" font-weight="bold" text-anchor="middle" fill="#a92f39" x="50%" y="160"/>
+						<text id="curiositySol" font-size="30" font-family="arial" font-weight="bold" text-anchor="middle" fill="#a92f39" x="50%" y="190"/>
+
+						<text id="earthLabel" font-size="30" font-family="arial" font-weight="bold" text-anchor="middle" fill="#1978aa" x="50%" y="345"/>
+						<text id="earthDate" font-size="30" font-family="arial" font-weight="bold" text-anchor="middle" fill="#1978aa" x="50%" y="375"/>
+						<text id="earthClock" font-size="30" font-family="arial" font-weight="bold" text-anchor="middle" fill="#1978aa" x="50%" y="405"/>
 
 						<!--white arrow - exported from a google drawing-->
 						<clipPath id="p.0"><path d="m0 0l1024.0 0l0 500.0l-1024.0 0l0 -500.0z" clip-rule="nonzero"></path></clipPath><g clip-path="url(#p.0)"><path fill="#000000" fill-opacity="0.0" d="m0 0l1024.0 0l0 500.0l-1024.0 0z" fill-rule="evenodd"></path><path fill="#000000" fill-opacity="0.0" d="m920.2887 396.28873l103.7113 0l0 103.7113l-103.7113 0z" fill-rule="evenodd"></path><g transform="matrix(0.40512230971128604 0.0 0.0 0.40512230971128604 920.2887149606299 396.2887149606299)"><clipPath id="p.1"><path d="m0 0l256.0 0l0 256.0l-256.0 0z" clip-rule="evenodd"></path></clipPath><image clip-path="url(#p.1)" fill="#000" width="256.0" height="256.0" x="0.0" y="0.0" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAADKUlEQVR42u3csQnCYBSFUXvBCVwhTcBRsoE72LqajU4THOH3CdpHFIL/PQfeAtH7xcrNBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAfrbVd3eBJQOb4b3X3uoMnAnnjfxMBCB2/CED4+EUAwscvAhA+fhGA8PGLAISPXwQgfPwiAOHjFwEIH78IQPj4RQDCxy8CED5+EYDw8YsAhI9fBCB8/CIA4eMXAQgfvwhA+PhFAMLHLwIQPn4RgPDxiwCEj18EIHz8IgBfBODY+jHXjT5V+CwCp44i4JcAiIAIgAgAIgCIACACgAgAIgCIACACgAgAIgCIACACgAgAIgCIACACIAIiACIgAiACIgAiIAIgAiIAIiACIAIiACIgAiACIgAiIAIgAiIAIiACIAIiACIgAiACIgAiIAIgAiIAIiAC/PZLuK+b3Gp37SgCc91oVf8VgKmBXwICACIgACACAgAiIAAgAgIAIiAAIAICACIgACACAgAiIAAgAgIAIiAAIAICACIgACACAgAiIAAgAgIAIiAAIAICACIgACACAgACIAAYv/ELAMaPAGD8CADGjwBg/AgAxo8AYPwIAMaPAGD8CADGjwBg/AgAxo8AYPwIAMaPAGD8AgDGLwBg/AIAxi8AYPwCAMbfcwD2rwi4de7a0fjnutGqYFl8z978YPzGD8Zv/GD8xg/Gb/xg/MYPxm/8YPzGD8Zv/GD8xg/Gb/xg/MYPxm/8YPzGD8Zv/GD8xg/Gb/xg/MYPxm/8YPyA8QPGDxg/YPxg/MYPxm/8YPzGD8Zv/GD8xg/Gb/xg/MYPxm/8YPzGD8Zv/GD8xg/Gb/yw0viPHY1/rht9qrA8ALu6mzc/iIDxgwgYP4iA8UNcBLZ1F+MHETB+EAHjBxEwfhAB4wcRMH4QAeMHETB+EAHjBxEwfhAB4wcRMH4QAeMHETB+EAHjh/QIGD+ERsD4ITQCxg+hETB+CI2A8UNoBIwfQiPw/LfhwZMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOvQA6N2aYHkyo8wAAAAASUVORK5CYII="></image></g></g>
