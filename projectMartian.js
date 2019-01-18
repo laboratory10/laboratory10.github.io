@@ -1,7 +1,3 @@
-//todo
-//add distance calc
-//make all svg text add from js in case it doesnt download
-//adjust default arc rotation too for this case
 
 let mslLabel = document.getElementById("mslLabel");
 let earthLabel = document.getElementById("earthLabel");
@@ -133,7 +129,7 @@ function tick() {
   earthLabel.innerHTML = "EARTH";
 }
 
-setInterval(function () {tick();}, 1000)
+setInterval(function () {tick();}, 1000);
 
 function getMarsDistance(currentTime) {
   //returns current distance to mars in KM given current time

@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+
+<svg version="1.1" viewBox="0 0 1024 500" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect fill="#021728" id="canvas_background" height="500" width="1024" y="0" x="0"/>
+
+  <!--main hex-->
+  <polygon points="512,-50 252,100 252,400 512,550 772,400 772,100" style="fill:#000815;stroke:#194c6d;stroke-width:8;fill-opacity:0.7;stroke-opacity:1.0"/>
+  <polyline points="320,255 704,255" style="stroke:#1ae732;stroke-width:2;fill-opacity:0"/>
+  <text text-anchor="middle" x="512" y="235" fill="#1c577c" font-size="60" font-family="arial" font-weight="bold">Project Blueprint</text>
+  <text text-anchor="middle" x="510" y="290" fill="#a92f39" font-size="28" font-family="arial" font-weight="bold">FitbitOS&#8482; Watch Face</text>
+  <script type="text/javascript">console.log("yo");</script>
+</svg>
