@@ -17,6 +17,25 @@ for (j=0; j<17; j++) {
     } else {
       pixels[i].setAttributeNS(null, "transform", "translate(" + (-650 + k*31) + ", " + (-263 + j*31) + ")");
     }
+    switch (k) {
+      case 0:
+      case 40:
+        pixels[i].setAttributeNS(null, "opacity", "0.2");
+        break;
+      case 1:
+      case 39:
+        pixels[i].setAttributeNS(null, "opacity", "0.4");
+        break;
+      case 2:
+      case 38:
+        pixels[i].setAttributeNS(null, "opacity", "0.6");
+        break;
+      case 3:
+      case 37:
+        pixels[i].setAttributeNS(null, "opacity", "0.8");
+        break;
+    }
+
     svg.appendChild(pixels[i]);
     i=i+1;
   }
