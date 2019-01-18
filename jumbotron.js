@@ -1,8 +1,4 @@
-/*let pixelGrid = document.querySelector("#pixelGrid");
-console.log(pixelGrid);
-let pixels = pixelArray.children;
-console.log(pixels.length);
-*/
+
 var svg = document.getElementById("jumbotronSvg");
 var pixels = [];
 var i = 0;
@@ -27,7 +23,40 @@ for (j=0; j<17; j++) {
 }
 
 for (i=0; i<pixels.length; i++) {
-    pixels[i].style.fill = randomBackground();
+  switch (i) {
+    case 182:
+    case 183:
+    case 184:
+    case 185:
+    case 186:
+    case 224:
+    case 227:
+    case 265:
+    case 267:
+    case 306:
+    case 309:
+    case 346:
+    case 350:
+    case 387:
+    case 392:
+    case 427:
+    case 433:
+    case 468:
+    case 475:
+    case 508:
+    case 509:
+    case 510:
+    case 511:
+    case 512:
+    case 513:
+    case 514:
+    case 515:
+    case 516:
+      pixels[i].style.fill = randomColor();
+      break;
+    default:
+      pixels[i].style.fill = randomBackground();
+  }
 }
 
 setInterval(function () {life();}, 100);
@@ -35,15 +64,48 @@ setInterval(function () {life();}, 100);
 function life () {
   var i;
   for (i=0; i<pixels.length; i++) {
-    pixels[i].style.fill = morphBackground ((pixels[i].style.fill.substring(4,6)));
-    //these expressions convert "android color" to r, g, and b using bitwise operators
-    //pixels[i].style.fill = advanceColor((pixels[i].style.fill >> 16) & 0xff,(pixels[i].style.fill >> 8) & 0xff,(pixels[i].style.fill) & 0xff);
+    switch (i) {
+      case 182:
+      case 183:
+      case 184:
+      case 185:
+      case 186:
+      case 224:
+      case 227:
+      case 265:
+      case 267:
+      case 306:
+      case 309:
+      case 346:
+      case 350:
+      case 387:
+      case 392:
+      case 427:
+      case 433:
+      case 468:
+      case 475:
+      case 508:
+      case 509:
+      case 510:
+      case 511:
+      case 512:
+      case 513:
+      case 514:
+      case 515:
+      case 516:
+        rgbVals = pixels[i].style.fill.match(/^rgb\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)$/i);
+        if (rgbVals) {
+          pixels[i].style.fill = advanceColor(Number(rgbVals[1]),Number(rgbVals[2]),Number(rgbVals[3]));
+        }
+        break;
+      default:
+        pixels[i].style.fill = morphBackground ((pixels[i].style.fill.substring(4,6)));
+    }
   }
 }
 
 function randomBackground () {
   let number = Math.floor(Math.random() * 5) + 20;
-  //return rgbToHex(number,number,number);
   return "rgb(" + number + "," + number + "," + number + ")";
 }
 
@@ -60,7 +122,6 @@ function morphBackground (startColor) {
   } else if (newColor < 15) {
     newColor = 15;
   }
-  //return rgbToHex(newColor,newColor,newColor);
   return "rgb(" + newColor + "," + newColor + "," + newColor + ")";
 }
 
@@ -104,11 +165,11 @@ function randomColor () {
       }
       break;
   }
-  return rgbToHex(r,g,b);
+  return "rgb(" + r + "," + g + "," + b + ")";
 }
 
 function advanceColor (oldR, oldG, oldB) {
-  var factor = Math.floor(Math.random() * 55) + 1;
+  var factor = Math.floor(Math.random() * 25) + 5;
   var r = oldR;
   var g = oldG;
   var b = oldB;
@@ -167,7 +228,7 @@ function advanceColor (oldR, oldG, oldB) {
     //sub from g
     g = advanceRGB(g, 0, factor);
   }
-  return rgbToHex(r,g,b);
+  return "rgb(" + r + "," + g + "," + b + ")";
 }
 
 function advanceRGB(oldValue, direction, factor) {
@@ -183,13 +244,4 @@ function advanceRGB(oldValue, direction, factor) {
     newValue = 0;
   }
   return newValue;
-}
-
-function componentToHex(c) {
-    var hex = c.toString(16);
-    return hex.length == 1 ? "0" + hex : hex;
-}
-
-function rgbToHex(r, g, b) {
-    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
