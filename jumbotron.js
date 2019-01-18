@@ -22,6 +22,28 @@ for (j=0; j<17; j++) {
   }
 }
 
+topText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
+topText.setAttributeNS(null, "text-anchor", "middle");
+topText.setAttributeNS(null, "x", "50%");
+topText.setAttributeNS(null, "y", "15%");
+topText.setAttributeNS(null, "fill", "white");
+topText.setAttributeNS(null, "font-size", "36");
+topText.setAttributeNS(null, "font-weight", "bold");
+topText.setAttributeNS(null, "font-family", "arial");
+svg.appendChild(topText);
+topText.innerHTML = "DISCOVER APPS";
+
+botText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
+botText.setAttributeNS(null, "text-anchor", "middle");
+botText.setAttributeNS(null, "x", "50%");
+botText.setAttributeNS(null, "y", "90%");
+botText.setAttributeNS(null, "fill", "white");
+botText.setAttributeNS(null, "font-size", "36");
+botText.setAttributeNS(null, "font-weight", "bold");
+botText.setAttributeNS(null, "font-family", "arial");
+svg.appendChild(botText);
+botText.innerHTML = "INSPIRED BY SCIENCE AND TECHNOLOGY";
+
 for (i=0; i<pixels.length; i++) {
   switch (i) {
     case 182:
