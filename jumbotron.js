@@ -93,7 +93,8 @@ for (i=0; i<pixels.length; i++) {
     case 514:
     case 515:
     case 516:
-      pixels[i].style.fill = randomColor();
+      //pixels[i].style.fill = randomColor();
+      pixels[i].style.fill = randomCustomColor();
       break;
     default:
       pixels[i].style.fill = randomBackground();
@@ -136,7 +137,7 @@ function life () {
       case 516:
         rgbVals = pixels[i].style.fill.match(/^rgb\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)$/i);
         if (rgbVals) {
-          pixels[i].style.fill = advanceColor(Number(rgbVals[1]),Number(rgbVals[2]),Number(rgbVals[3]));
+          //pixels[i].style.fill = advanceColor(Number(rgbVals[1]),Number(rgbVals[2]),Number(rgbVals[3]));
         }
         break;
       default:
@@ -285,4 +286,86 @@ function advanceRGB(oldValue, direction, factor) {
     newValue = 0;
   }
   return newValue;
+}
+
+function randomCustomColor () {
+  //force r to be zero
+  var zeroColor = Math.floor(Math.random() * 3) + 1;
+  //another must be 255
+  var fullColor = Math.round(Math.random());
+  var r = 0;
+  var g = Math.floor(Math.random() * 256);
+  var b = Math.floor(Math.random() * 256);
+
+  if (fullColor==0){
+    g = 255;
+    b = Math.floor(Math.random() * 256);
+  } else{
+    g = Math.floor(Math.random() * 256);
+    b = 255;
+  }
+  return "rgb(" + r + "," + g + "," + b + ")";
+}
+
+function advanceCustomColor (oldR, oldG, oldB) {
+  var factor = Math.floor(Math.random() * 25) + 5;
+  var r = oldR;
+  var g = oldG;
+  var b = oldB;
+  //implement color change algorithm
+  //first, cover cases where one r/g/b value is transitioning
+  if (oldR < 255 && oldR > 0) {
+    if (oldG == 255) {
+      //sub form r
+      r = advanceRGB(r, 0, factor);
+    } else if (oldB == 255) {
+      //add to r
+      r = advanceRGB(r, 1, factor);
+    }
+  }
+  if (oldG < 255 && oldG > 0) {
+    if (oldB == 255) {
+      //sub from g
+      g = advanceRGB(g, 0, factor);
+    } else if (oldR == 255) {
+      //add to g
+      g = advanceRGB(g, 1, factor);
+    }
+  }
+  if (oldB < 255 && oldB > 0) {
+    if (oldR == 255) {
+      //sub from b
+      b = advanceRGB(b, 0, factor);
+    } else if (oldG == 255) {
+      //add to b
+      b = advanceRGB(b, 1, factor);
+    }
+  }
+  //then cover cases where two are zero
+  if (oldR == 0 && oldG == 0) {
+    //add to r
+    r = advanceRGB(r, 1, factor);
+  }
+  if (oldR == 0 && oldB == 0) {
+    //add to b
+    b = advanceRGB(b, 1, factor);
+  }
+  if (oldG == 0 && oldB == 0) {
+    //add to g
+    g = advanceRGB(g, 1, factor);
+  }
+  //finally, cover cases where two are 255
+  if (oldR == 255 && oldG == 255) {
+    //sub from r
+    r = advanceRGB(r, 0, factor);
+  }
+  if (oldR == 255 && oldB == 255) {
+    //sub from b
+    b = advanceRGB(b, 0, factor);
+  }
+  if (oldG == 255 && oldB == 255) {
+    //sub from g
+    g = advanceRGB(g, 0, factor);
+  }
+  return "rgb(" + r + "," + g + "," + b + ")";
 }
