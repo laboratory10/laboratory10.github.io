@@ -52,16 +52,6 @@ header p:hover{
   color: white;
 }
 
-.jumbotron h3 {
-  margin: 0 0 20px;
-  color: #fff;
-}
-
-section .row img {
-  margin: 0 0 30px;
-  width: 100%;
-}
-
 section .row svg {
   margin: 0 0 30px;
   width: 100%;
@@ -72,18 +62,36 @@ section .row svg {
   padding: 25px;
 }
 
-figure p {
-	border-top-style: solid;
-	border-color: white;
-}
-
-.col-md-6:hover p{
+.col-md-6:hover p {
 	text-decoration: underline;
 	border-color: black;
 }
 
 .col-md-6:hover {
     cursor: pointer;
+}
+
+figure p {
+	border-top-style: solid;
+	border-color: white;
+}
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none;
+}
+.vertical-align-center {
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    width:inherit;
+    height:inherit;
+    margin: 0 auto;
+    pointer-events: all;
 }
 
 .btn.btn-primary {
@@ -148,22 +156,4 @@ footer ul {
 footer li img {
   width: 32px;
   height: 32px;
-}
-
-.vertical-alignment-helper {
-    display:table;
-    height: 100%;
-    width: 100%;
-    pointer-events:none;
-}
-.vertical-align-center {
-    display: table-cell;
-    vertical-align: middle;
-    pointer-events:none;
-}
-.modal-content {
-    width:inherit;
-    height:inherit;
-    margin: 0 auto;
-    pointer-events: all;
 }

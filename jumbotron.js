@@ -1,4 +1,3 @@
-
 var svg = document.getElementById("jumbotronSvg");
 var pixels = [];
 var i = 0;
@@ -101,7 +100,7 @@ for (i=0; i<pixels.length; i++) {
   }
 }
 
-setInterval(function () {life();}, 100);
+setInterval(function () {life();}, 125);
 
 function life () {
   var i;
@@ -153,7 +152,7 @@ function randomBackground () {
 }
 
 function morphBackground (startColor) {
-  var factor = Math.floor(Math.random()) + 1;
+  var factor = Math.round(Math.random());
   var direction = Math.round(Math.random());
   if (direction == 0) {
     var newColor = startColor - factor;
@@ -167,112 +166,6 @@ function morphBackground (startColor) {
   }
   return "rgb(" + newColor + "," + newColor + "," + newColor + ")";
 }
-/*
-function randomColor () {
-  //one of the r/g/b components must be zero
-  var zeroColor = Math.floor(Math.random() * 3) + 1;
-  //another must be 255
-  var fullColor = Math.floor(Math.random() * 2) + 1;
-  var r;
-  var g;
-  var b;
-  switch (zeroColor) {
-    case 1:
-      r = 0;
-      if (fullColor==1){
-        g = 255;
-        b = Math.floor(Math.random() * 256);
-      } else{
-        g = Math.floor(Math.random() * 256);
-        b = 255;
-      }
-      break;
-    case 2:
-      g = 0;
-      if (fullColor==1){
-        r = 255;
-        b = Math.floor(Math.random() * 256);
-      } else{
-        r = Math.floor(Math.random() * 256);
-        b = 255;
-      }
-      break;
-    case 3:
-      b = 0;
-      if (fullColor==1){
-        r = 255;
-        g = Math.floor(Math.random() * 256);
-      } else{
-        r = Math.floor(Math.random() * 256);
-        g = 255;
-      }
-      break;
-  }
-  return "rgb(" + r + "," + g + "," + b + ")";
-}*/
-/*
-function advanceColor (oldR, oldG, oldB) {
-  var factor = Math.floor(Math.random() * 25) + 5;
-  var r = oldR;
-  var g = oldG;
-  var b = oldB;
-  //implement color change algorithm
-  //first, cover cases where one r/g/b value is transitioning
-  if (oldR < 255 && oldR > 0) {
-    if (oldG == 255) {
-      //sub form r
-      r = advanceRGB(r, 0, factor);
-    } else if (oldB == 255) {
-      //add to r
-      r = advanceRGB(r, 1, factor);
-    }
-  }
-  if (oldG < 255 && oldG > 0) {
-    if (oldB == 255) {
-      //sub from g
-      g = advanceRGB(g, 0, factor);
-    } else if (oldR == 255) {
-      //add to g
-      g = advanceRGB(g, 1, factor);
-    }
-  }
-  if (oldB < 255 && oldB > 0) {
-    if (oldR == 255) {
-      //sub from b
-      b = advanceRGB(b, 0, factor);
-    } else if (oldG == 255) {
-      //add to b
-      b = advanceRGB(b, 1, factor);
-    }
-  }
-  //then cover cases where two are zero
-  if (oldR == 0 && oldG == 0) {
-    //add to r
-    r = advanceRGB(r, 1, factor);
-  }
-  if (oldR == 0 && oldB == 0) {
-    //add to b
-    b = advanceRGB(b, 1, factor);
-  }
-  if (oldG == 0 && oldB == 0) {
-    //add to g
-    g = advanceRGB(g, 1, factor);
-  }
-  //finally, cover cases where two are 255
-  if (oldR == 255 && oldG == 255) {
-    //sub from r
-    r = advanceRGB(r, 0, factor);
-  }
-  if (oldR == 255 && oldB == 255) {
-    //sub from b
-    b = advanceRGB(b, 0, factor);
-  }
-  if (oldG == 255 && oldB == 255) {
-    //sub from g
-    g = advanceRGB(g, 0, factor);
-  }
-  return "rgb(" + r + "," + g + "," + b + ")";
-}*/
 
 function advanceRGB(oldValue, direction, factor) {
   var newValue;
@@ -309,7 +202,7 @@ function randomCustomColor () {
 }
 
 function advanceCustomColor (oldR, oldG, oldB) {
-  var factor = Math.floor(Math.random() * 25) + 5;
+  var factor = Math.floor(Math.random() * 15) + 5;
   var r = oldR;
   var g = oldG;
   var b = oldB;
