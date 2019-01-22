@@ -11,6 +11,7 @@ center modals vertically
 improve color/bkg flow
 trim main.css for unused items
 improve efficiency of css usage
+test contact form
 email address validation on contact form
 -->
 <!DOCTYPE html>
@@ -36,124 +37,136 @@ email address validation on contact form
 			</div>
 		</header>
 		<div class="modal fade" id="contactModal" role="dialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h1 class="modal-title">Send us a message!</h1>
-					</div>
-					<div class="modal-body" style="padding-bottom:60px;">
-						<form action="https://formspree.io/laboratory0010@gmail.com" method="post">
-							<input type="hidden" name="_next" value="//laboratory10.github.io/thanks" />
-							<div class="form-group">
-								<label for="name" class="form-control-label">Name:</label>
-								<input type="text" class="form-control" id="name" name="user_name"></textarea>
-							</div>
-							<div class="form-group">
-								<label for="email" class="form-control-label">E-mail:</label>
-								<input type="email" class="form-control" id="email" name="user_email"></textarea>
-							</div>
-							<div class="form-group">
-								<label for="msg" class="form-control-label">Message:</label>
-								<textarea class="form-control" rows="7" id="msg" name="user_message"></textarea>
-							</div>
-							<button type="button" class="btn btn-secondary" onclick="this.parentNode.submit();">Send Message</button>
-						</form>
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h1 class="modal-title">Send us a message!</h1>
+						</div>
+						<div class="modal-body" style="padding-bottom:60px;">
+							<form action="https://formspree.io/laboratory0010@gmail.com" method="post">
+								<input type="hidden" name="_next" value="//laboratory10.github.io/thanks" />
+								<div class="form-group">
+									<label for="name" class="form-control-label">Name:</label>
+									<input type="text" class="form-control" id="name" name="user_name"></input>
+								</div>
+								<div class="form-group">
+									<label for="email" class="form-control-label">E-mail:</label>
+									<input type="email" class="form-control" id="email" name="user_email"></input>
+								</div>
+								<div class="form-group">
+									<label for="msg" class="form-control-label">Message:</label>
+									<textarea class="form-control" rows="7" id="msg" name="user_message"></textarea>
+								</div>
+								<button type="button" class="btn btn-secondary" onclick="this.parentNode.submit();">Send Message</button>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="modal fade" id="aboutModal" role="dialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h1 class="modal-title">About Laboratory10</h1>
-					</div>
-					<div class="modal-body">
-						<p>
-							Laboratory10 is a small team that is passionate about science and space exploration.
-							We are experimenting with ways to make scientific data more accessible and engaging
-							to a wider audience. Accomplishing this goal would allow more people to benefit from research data
-							and inspire the next generation of explorers. If you have ideas and want to work with us to make
-							that happen, send us a message!
-						</p>
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h1 class="modal-title">About Laboratory10</h1>
+						</div>
+						<div class="modal-body">
+							<p>
+								Laboratory10 is a small team that is passionate about science and space exploration.
+								We are experimenting with ways to make scientific data more accessible and engaging
+								to a wider audience. Accomplishing this goal would allow more people to benefit from research data
+								and inspire the next generation of explorers. If you have ideas and want to work with us to make
+								that happen, send us a message!
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="modal fade" id="marsLinkModal" role="dialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h1 class="modal-title">MarsLink</h1>
-					</div>
-					<div class="modal-body">
-						<p>MarsLink was built with the goal to give people an easy way to stay in touch with their inner scientist
-						as Curiosity studies Gale Crater on Mars.<br><br>MarsLink allows real-time Mars images from Curiosity to be
-						used as the background for your device. When active, MarsLink will cycle through that day’s downloaded
-						images every half hour.  An auto-update feature can be enabled to automatically check for new images from
-						the rover every 12 hours. With both of these options active, you never need to open the app to see the
-						latest images from Mars.<br><br>MarsLink is available on Google Play. Click the link below to see our store listing!</p>
-						<a href='https://play.google.com/store/apps/details?id=io.github.laboratory10.marslink&hl=en&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-							<img style="width:400px;display:block;margin:0 auto;" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
-						</a>
-						<p style="font-size:14px;">Google Play and the Google Play logo are trademarks of Google Inc.</p>
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h1 class="modal-title">MarsLink</h1>
+						</div>
+						<div class="modal-body">
+							<p>MarsLink was built with the goal to give people an easy way to stay in touch with their inner scientist
+							as Curiosity studies Gale Crater on Mars.<br><br>MarsLink allows real-time Mars images from Curiosity to be
+							used as the background for your device. When active, MarsLink will cycle through that day’s downloaded
+							images every half hour.  An auto-update feature can be enabled to automatically check for new images from
+							the rover every 12 hours. With both of these options active, you never need to open the app to see the
+							latest images from Mars.<br><br>MarsLink is available on Google Play. Click the link below to see our store listing!</p>
+							<a href='https://play.google.com/store/apps/details?id=io.github.laboratory10.marslink&hl=en&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+								<img style="width:400px;display:block;margin:0 auto;" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
+							</a>
+							<p style="font-size:14px;">Google Play and the Google Play logo are trademarks of Google Inc.</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="modal fade" id="marsLinkOrbitalModal" role="dialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h1 class="modal-title">MarsLink Orbital</h1>
-					</div>
-					<div class="modal-body">
-						<p>MarsLink Orbital was created so the amazing images and data captured by the HiRISE camera on the Mars Reconnaissance
-						Orbiter could benefit a wider audience. When the main toggle switch is activated, it will set the current orbital image as
-						the wallpaper and lock screen. If you choose to, you can also let your phone/tablet automatically retrieve new images based
-						on a selected time interval. Each time the app attempts to update the image, it retrieves a random image and the related
-						scientific data from our database. We hope you enjoy exploring Mars from Orbit!<br><br>MarsLink Orbital is available on
-						Google Play. Click the link below to see our store listing!</p>
-						<a href='https://play.google.com/store/apps/details?id=io.github.laboratory10.marslinkorbital&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-							<img style="width:400px;display:block;margin:0 auto;" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
-						</a>
-						<p style="font-size:14px;">Google Play and the Google Play logo are trademarks of Google Inc.</p>
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h1 class="modal-title">MarsLink Orbital</h1>
+						</div>
+						<div class="modal-body">
+							<p>MarsLink Orbital was created so the amazing images and data captured by the HiRISE camera on the Mars Reconnaissance
+							Orbiter could benefit a wider audience. When the main toggle switch is activated, it will set the current orbital image as
+							the wallpaper and lock screen. If you choose to, you can also let your phone/tablet automatically retrieve new images based
+							on a selected time interval. Each time the app attempts to update the image, it retrieves a random image and the related
+							scientific data from our database. We hope you enjoy exploring Mars from Orbit!<br><br>MarsLink Orbital is available on
+							Google Play. Click the link below to see our store listing!</p>
+							<a href='https://play.google.com/store/apps/details?id=io.github.laboratory10.marslinkorbital&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+								<img style="width:400px;display:block;margin:0 auto;" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
+							</a>
+							<p style="font-size:14px;">Google Play and the Google Play logo are trademarks of Google Inc.</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="modal fade" id="blueprintModal" role="dialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h1 class="modal-title">Project Blueprint</h1>
-					</div>
-					<div class="modal-body">
-						<p>Laboratory10 has released the Project Blueprint watchface for all Fitbit smartwatch devices using FitbitOS&#8482;.<br><br>
-						To see the listing in the Fitbit App Gallery and download the watchface for free, <u><a href='https://gam.fitbit.com/gallery/clock/86a20014-11f0-4d42-a3e2-26c56b47d660'>click here</a></u>
-						on your mobile device. Note that this link won't work properly unless you have the Fitbit App installed on your mobile device.</p>
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h1 class="modal-title">Project Blueprint</h1>
+						</div>
+						<div class="modal-body">
+							<p>Laboratory10 has released the Project Blueprint watchface for all Fitbit smartwatch devices using FitbitOS&#8482;.<br><br>
+							To see the listing in the Fitbit App Gallery and download the watchface for free, <u><a href='https://gam.fitbit.com/gallery/clock/86a20014-11f0-4d42-a3e2-26c56b47d660'>click here</a></u>
+							on your mobile device. Note that this link won't work properly unless you have the Fitbit App installed on your mobile device.</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="modal fade" id="martianModal" role="dialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h1 class="modal-title">Project Martian</h1>
-					</div>
-					<div class="modal-body">
-						<p>Laboratory10 has released the Project Martian watchface for all Fitbit smartwatch devices using FitbitOS&#8482;.<br><br>
-						In addition to showing fitness statistics and current date/time info, the watch face also has a "Mars Mode" which dispays
-						the current Sol (day), time, and distance from Earth for the Curiosity Rover. To see the listing in the Fitbit App Gallery
-						and download the watchface for free, <u><a href='https://gam.fitbit.com/gallery/clock/37484fcf-4ae4-45d2-9dd2-72458035e114'>click here</a></u>
-						on your mobile device. Note that this link won't work properly unless you have the Fitbit App installed on your mobile device.</p>
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h1 class="modal-title">Project Martian</h1>
+						</div>
+						<div class="modal-body">
+							<p>Laboratory10 has released the Project Martian watchface for all Fitbit smartwatch devices using FitbitOS&#8482;.<br><br>
+							In addition to showing fitness statistics and current date/time info, the watch face also has a "Mars Mode" which dispays
+							the current Sol (day), time, and distance from Earth for the Curiosity Rover. To see the listing in the Fitbit App Gallery
+							and download the watchface for free, <u><a href='https://gam.fitbit.com/gallery/clock/37484fcf-4ae4-45d2-9dd2-72458035e114'>click here</a></u>
+							on your mobile device. Note that this link won't work properly unless you have the Fitbit App installed on your mobile device.</p>
+						</div>
 					</div>
 				</div>
 			</div>
