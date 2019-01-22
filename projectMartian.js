@@ -1,4 +1,3 @@
-
 let mslLabel = document.getElementById("mslLabel");
 let earthLabel = document.getElementById("earthLabel");
 

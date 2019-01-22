@@ -20,15 +20,15 @@ for (j=0; j<17; j++) {
     switch (k) {
       case 0:
       case 40:
-        pixels[i].setAttributeNS(null, "opacity", "0.2");
+        pixels[i].setAttributeNS(null, "opacity", "0.1");
         break;
       case 1:
       case 39:
-        pixels[i].setAttributeNS(null, "opacity", "0.4");
+        pixels[i].setAttributeNS(null, "opacity", "0.2");
         break;
       case 2:
       case 38:
-        pixels[i].setAttributeNS(null, "opacity", "0.6");
+        pixels[i].setAttributeNS(null, "opacity", "0.5");
         break;
       case 3:
       case 37:
@@ -138,6 +138,7 @@ function life () {
         rgbVals = pixels[i].style.fill.match(/^rgb\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)$/i);
         if (rgbVals) {
           //pixels[i].style.fill = advanceColor(Number(rgbVals[1]),Number(rgbVals[2]),Number(rgbVals[3]));
+          pixels[i].style.fill = advanceCustomColor(Number(rgbVals[1]),Number(rgbVals[2]),Number(rgbVals[3]));
         }
         break;
       default:
@@ -166,7 +167,7 @@ function morphBackground (startColor) {
   }
   return "rgb(" + newColor + "," + newColor + "," + newColor + ")";
 }
-
+/*
 function randomColor () {
   //one of the r/g/b components must be zero
   var zeroColor = Math.floor(Math.random() * 3) + 1;
@@ -208,8 +209,8 @@ function randomColor () {
       break;
   }
   return "rgb(" + r + "," + g + "," + b + ")";
-}
-
+}*/
+/*
 function advanceColor (oldR, oldG, oldB) {
   var factor = Math.floor(Math.random() * 25) + 5;
   var r = oldR;
@@ -271,7 +272,7 @@ function advanceColor (oldR, oldG, oldB) {
     g = advanceRGB(g, 0, factor);
   }
   return "rgb(" + r + "," + g + "," + b + ")";
-}
+}*/
 
 function advanceRGB(oldValue, direction, factor) {
   var newValue;
@@ -293,7 +294,7 @@ function randomCustomColor () {
   var zeroColor = Math.floor(Math.random() * 3) + 1;
   //another must be 255
   var fullColor = Math.round(Math.random());
-  var r = 0;
+  var r = 1;
   var g = Math.floor(Math.random() * 256);
   var b = Math.floor(Math.random() * 256);
 
@@ -314,55 +315,49 @@ function advanceCustomColor (oldR, oldG, oldB) {
   var b = oldB;
   //implement color change algorithm
   //first, cover cases where one r/g/b value is transitioning
-  if (oldR < 255 && oldR > 0) {
-    if (oldG == 255) {
-      //sub form r
-      r = advanceRGB(r, 0, factor);
-    } else if (oldB == 255) {
-      //add to r
-      r = advanceRGB(r, 1, factor);
-    }
-  }
   if (oldG < 255 && oldG > 0) {
-    if (oldB == 255) {
+    if (oldR == 0) {
       //sub from g
       g = advanceRGB(g, 0, factor);
-    } else if (oldR == 255) {
+      if (g == 0) {
+        r = 1;
+      }
+    } else {
       //add to g
       g = advanceRGB(g, 1, factor);
+      if (g == 255) {
+        r = 0;
+        b = 254;
+      }
     }
   }
   if (oldB < 255 && oldB > 0) {
-    if (oldR == 255) {
+    if (oldR == 0) {
       //sub from b
       b = advanceRGB(b, 0, factor);
-    } else if (oldG == 255) {
+      if (b == 0) {
+        r = 1;
+      }
+    } else {
       //add to b
       b = advanceRGB(b, 1, factor);
+      if (b == 255) {
+        r = 0;
+        g = 254;
+      }
     }
   }
   //then cover cases where two are zero
-  if (oldR == 0 && oldG == 0) {
-    //add to r
-    r = advanceRGB(r, 1, factor);
-  }
-  if (oldR == 0 && oldB == 0) {
+  if (oldB == 0) {
     //add to b
     b = advanceRGB(b, 1, factor);
   }
-  if (oldG == 0 && oldB == 0) {
+  if (oldG == 0) {
     //add to g
     g = advanceRGB(g, 1, factor);
   }
-  //finally, cover cases where two are 255
-  if (oldR == 255 && oldG == 255) {
-    //sub from r
-    r = advanceRGB(r, 0, factor);
-  }
-  if (oldR == 255 && oldB == 255) {
-    //sub from b
-    b = advanceRGB(b, 0, factor);
-  }
+  //then cover cases where two are 255
+  //this should never happen for custom colors...check above
   if (oldG == 255 && oldB == 255) {
     //sub from g
     g = advanceRGB(g, 0, factor);
