@@ -37,29 +37,19 @@ header p:hover{
 
 .jumbotron {
   display: flex;
+  background-position: center;s
   align-items: center;
-  background-image: url("img/background-2462431_1920.jpg");
-  background-size: cover;
-  color: #ffffff;
+  background-color: #000000;
   height: 500px;
   text-shadow: 0.25px 0.25px 0.25px #000000;
+  padding: 0;
 }
 
 .jumbotron h2 {
   font-size: 40px;
   font-weight: 700;
   margin: 0;
-  color: black;
-}
-
-.jumbotron h3 {
-  margin: 0 0 20px;
-  color: #fff;
-}
-
-section .row img {
-  margin: 0 0 30px;
-  width: 100%;
+  color: white;
 }
 
 section .row svg {
@@ -72,18 +62,36 @@ section .row svg {
   padding: 25px;
 }
 
-figure p {
-	border-top-style: solid;
-	border-color: white;
-}
-
-.col-md-6:hover p{
+.col-md-6:hover p {
 	text-decoration: underline;
 	border-color: black;
 }
 
 .col-md-6:hover {
     cursor: pointer;
+}
+
+figure p {
+	border-top-style: solid;
+	border-color: white;
+}
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none;
+}
+.vertical-align-center {
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    width:inherit;
+    height:inherit;
+    margin: 0 auto;
+    pointer-events: all;
 }
 
 .btn.btn-primary {
