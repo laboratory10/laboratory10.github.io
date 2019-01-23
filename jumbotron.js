@@ -116,6 +116,6 @@ svg.appendChild(botText);
 botText.innerHTML = "INSPIRED BY SCIENCE AND TECHNOLOGY";
 
 function randomBackground () {
-  let number = Math.floor(Math.random() * 5) + 20;
+  let number = Math.floor(Math.random() * 10) + 25;
   return "rgb(" + number + "," + number + "," + number + ")";
 }
