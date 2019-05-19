@@ -54,7 +54,7 @@ firebase.auth().onAuthStateChanged(function() {
           pendingDiv.className = "col-md-6";
           pendingDiv.style = "padding:0px;";
           var pendingText = document.createElement("text");
-          pendingText.innerHTML = "Savings: $" + user.child("pending_balance").val();
+          pendingText.innerHTML = "Pending: $" + user.child("pending_balance").val();
 
           savingsDiv.appendChild(savingsText);
           spendingDiv.appendChild(spendingText);
