@@ -17,16 +17,16 @@ firebase.auth().onAuthStateChanged(function() {
   } else {
     firebase.database().ref("accounts/" + firebase.auth().currentUser.uid + "/users").on('value', (snapshot) => {
       contentArea.innerHTML = ""
-      snapshot.forEach((child) => {
+      snapshot.forEach((user) => {
         var newButton = document.createElement("button");
-        newButton.innerHTML = child.child("name").val();
+        newButton.innerHTML = user.child("name").val();
         newButton.type = "button";
         newButton.style = "margin-bottom:0px;width:100%";
         newButton.addEventListener("click", function(){
-          if (child.child("type").val() == "captain") {
-            window.location = "CaptainMenu.html?u=" + child.key;
+          if (user.child("type").val() == "captain") {
+            window.location = "CaptainMenu.html?u=" + user.key;
           } else {
-            window.location = "KidMenu.html?u=" + child.key;
+            window.location = "KidMenu.html?u=" + user.key;
           }
         })
 

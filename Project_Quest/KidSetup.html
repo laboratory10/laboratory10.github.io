@@ -18,9 +18,54 @@
         <button id="mainMenuButton" type="button" class="btn btn-primary" style="float: right;">Main Menu</button>
 			</div>
 		</header>
+		<div class="modal fade" id="userModal" role="dialog">
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h2 class="modal-title">Setup</h2>
+						</div>
+						<div class="modal-body" style="padding-bottom:20px;">
+              <h3 class="modal-title">Name:</h3>
+              <input type="text"style="width:100%;" id="userNameInput" required></input>
+              <hr>
+							<div style="text-align:center;">
+              	<button type="button" id="cancelButton" data-dismiss="modal" style="display:inline-block;float:left;">Cancel</button>
+								<button type="button" id="deleteButton" data-dismiss="modal" style="display:inline-block;">Delete</button>
+              	<button type="submit" id="saveButton" style="display:inline-block;float:right;">Save</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="confirmModal" role="dialog">
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-body" style="padding-bottom:60px;text-align:center;">
+              <text id="confirmMessage"></text>
+              <hr>
+            	<button type="button" data-dismiss="modal" style="display:inline-block;float:left;">Cancel</button>
+            	<button type="submit" id="confirmDeleteButton" style="display:inline-block;float:right;">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6" style="float:none;margin:auto;text-align:center;padding:5px;">
+			<h2 id="pageLabel">Kid Setup</h2><br>
+			<button type="button" style="width:80%;" data-toggle="modal" data-target="#userModal">ADD NEW KID</button><hr>
+		</div>
 		<section id="contentArea" align="center" class="container" style="margin-top: 20px;">
 
 		</section>
+
+		<div id="toast">
+			<img src="QuestAssets/quest_setup.svg" style="width:50px;float:left">
+			<div id="desc"></div>
+		</div>
 
 		<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>

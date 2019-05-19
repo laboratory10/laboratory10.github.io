@@ -4,13 +4,13 @@ let accountsButton = document.getElementById("accountsButton");
 let kidSetupButton = document.getElementById("kidSetupButton");
 let questSetupButton = document.getElementById("questSetupButton");
 
+let user = getQueryVariable("u");
+
 mainMenuButton.onclick = mainMenu;
 approveButton.onclick = navigateToApprove;
 accountsButton.onclick = navigateToAccounts;
 kidSetupButton.onclick = navigateToKidSetup;
 questSetupButton.onclick = navigateToQuestSetup;
-
-let user = getQueryVariable("u");
 
 function mainMenu() {
   window.location = "Users.html";
@@ -18,7 +18,7 @@ function mainMenu() {
 
 function navigateToApprove() {
   if (user != false) {
-    window.location = "Approve.html?u=" + user;
+    window.location = "Approve.html";
   } else {
     window.location = "Users.html";
   }
@@ -26,7 +26,7 @@ function navigateToApprove() {
 
 function navigateToAccounts() {
   if (user != false) {
-    window.location = "Accounts.html?u=" + user;
+    window.location = "Accounts.html";
   } else {
     window.location = "Users.html";
   }
@@ -34,7 +34,7 @@ function navigateToAccounts() {
 
 function navigateToKidSetup() {
   if (user != false) {
-    window.location = "KidSetup.html?u=" + user;
+    window.location = "KidSetup.html";
   } else {
     window.location = "Users.html";
   }
@@ -42,7 +42,7 @@ function navigateToKidSetup() {
 
 function navigateToQuestSetup() {
   if (user != false) {
-    window.location = "QuestSetup.html?u=" + user;
+    window.location = "QuestSetup.html";
   } else {
     window.location = "Users.html";
   }
@@ -55,5 +55,5 @@ function getQueryVariable(variable) {
     var pair = vars[i].split("=");
     if(pair[0] == variable){return pair[1];}
   }
- return(false);
+ return false;
 }
