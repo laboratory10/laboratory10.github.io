@@ -282,7 +282,11 @@ function approveQuests () {
       dataRef.child("pending_balance").set(pending_balance.toFixed(2));
     }
 
-    desc.innerHTML = "Successfully approved " + selectedQuests.length + "quests!";
+    if (selectedQuests.length > 1) {
+      desc.innerHTML = "Successfully approved " + selectedQuests.length + " quests!";
+    } else {
+      desc.innerHTML = "Successfully approved " + selectedQuests.length + " quest!";
+    }
     toast.className = "show";
     setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 5000);
 
