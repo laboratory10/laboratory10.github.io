@@ -38,6 +38,6 @@ firebase.auth().onAuthStateChanged(function() {
         contentArea.appendChild(newDiv);
 
       });
-    })
+    });
   }
 });
