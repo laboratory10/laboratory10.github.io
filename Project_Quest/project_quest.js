@@ -15,7 +15,9 @@ let desc = document.getElementById("desc");
 
 loginButton.onclick = login;
 sendResetEmailButton.onclick = sendResetEmail;
-//createAccountButton.onclick = createNewAccount;
+createAccountButton.onclick = createNewAccount;
+
+var creatingNewAccount = false;
 
 function login () {
   errorText.innerHTML = ""
@@ -50,29 +52,40 @@ function sendResetEmail () {
 }
 
 function createNewAccount () {
+  creatingNewAccount = true
   let name = newName.value
   let email = newEmail.value
   let password = newPassword.value
-  firebase.auth().createUserWithEmailPassword(email, password).then(function() {
+  firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
     //success
     console.log(firebase.auth().currentUser.uid)
     //create new user inside account
-    //TODO
-    
+    let newUserId = new Date().getTime();
+    firebase.database().ref("accounts/" + firebase.auth().currentUser.uid + "/users/" + newUserId).set({
+      name: name,
+      type: "captain"
+    }).then(function() {
+      //navigate to users page
+      window.location = "Users.html";
+    });
+
     createCancelButton.click();
     newName.value = "";
     newEmail.value = "";
     newPassword.value = "";
+
   }).catch(function(error) {
     //error occured
     desc.innerHTML = error.message;
     toast.className = "show";
     setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 5000);
-  })
+  });
 }
 
 firebase.auth().onAuthStateChanged(function() {
   if (firebase.auth().currentUser) {
-    window.location = "Users.html";
+    if (!creatingNewAccount) {
+      window.location = "Users.html";
+    }
   }
 });
