@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Project Quest</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+	</head>
+	<body>
+		<header class="container">
+			<div>
+				<img src="img/flask-outline.png" style="width:40px;height:40px;margin:0px;" align="left">
+        <text>Save</text>
+        <button id="mainMenuButton" type="button" class="btn btn-primary" style="float: right;">Main Menu</button>
+			</div>
+		</header>
+    <div class="modal fade" id="transferModal" role="dialog">
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h2 class="modal-title">Transfer Money</h2>
+						</div>
+						<div class="modal-body" style="padding-bottom:60px;">
+              <h3>From:</h3>
+              <select id="fromAccountSelect" style="width:100%;">
+                <option value="savings_balance" selected>Savings</option>
+                <option value="spending_balance">Spending</option>
+                <option value="giving_balance">Giving</option>
+              </select>
+              <hr>
+              <h3>To:</h3>
+              <select id="toAccountSelect" style="width:100%;">
+                <option value="savings_balance">Savings</option>
+                <option value="spending_balance" selected>Spending</option>
+                <option value="giving_balance">Giving</option>
+              </select>
+              <hr>
+              <h3>Amount:</h3>
+              <input type="number" class="no-spinners" style="width:100%;" id="transferAmount" min="0" step=".01" required></input>
+              <hr>
+              <button type="button" id="cancelButton" data-dismiss="modal" style="float:left;">Cancel</button>
+              <button type="submit" id="transferButton" style="float:right;">Transfer</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section id="contentArea" align="center" class="container" style="margin-top: 20px;">
+      <div class="col-md-6" style="float:none;margin:auto;text-align:center;padding:5px;">
+				<h2 id="pageLabel">Accounts</h2><br>
+        <button type="button" style="width:80%;" data-toggle="modal" data-target="#transferModal">Transfer Money</button><hr>
+      </div>
+      <div class="col-md-6" style="float:none;margin:auto;text-align:center;padding-top:0px">
+        <img src="QuestAssets/savings_account_icon.svg" style="width:100px;"><br>
+				<text id="savingsBalance">Savings Balance: Loading...</text>
+      </div>
+      <div class="col-md-6" style="float:none;margin:auto;text-align:center;">
+        <img src="QuestAssets/spending_account_icon.svg" style="width:100px;"><br>
+				<text id="spendingBalance">Spending Balance: Loading...</text>
+      </div>
+      <div class="col-md-6" style="float:none;margin:auto;text-align:center;">
+        <img src="QuestAssets/giving_account_icon.svg" style="width:100px;"><br>
+				<text id="givingBalance">Giving Balance: Loading...</text>
+      </div>
+      <div class="col-md-6" style="float:none;margin:auto;text-align:center;">
+        <img src="QuestAssets/pending_account_icon.svg" style="width:100px;"><br>
+				<text id="pendingBalance">Pending Balance: Loading...</text>
+      </div>
+		</section>
+
+		<div id="toast">
+			<img src="QuestAssets/quest_setup.svg" style="width:50px;float:left">
+			<div id="desc"></div>
+		</div>
+
+		<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+
+		<script>
+		  var firebaseConfig = {
+		    apiKey: "AIzaSyCnsnGKPBILTDXQaIaxj9yQ2j2n9RWEu_g",
+		    authDomain: "project-quest.firebaseapp.com",
+		    databaseURL: "https://project-quest.firebaseio.com",
+		    projectId: "project-quest",
+		    storageBucket: "project-quest.appspot.com",
+		    messagingSenderId: "754866069984",
+		    appId: "1:754866069984:web:c74376fce252920e"
+		  };
+		  firebase.initializeApp(firebaseConfig);
+		</script>
+
+		<script type="text/javascript" src="Save.js"></script>
+	</body>
+</html>

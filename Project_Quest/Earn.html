@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Project Quest</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+	</head>
+	<body>
+		<header class="container">
+			<div>
+				<img src="img/flask-outline.png" style="width:40px;height:40px;margin:0px;" align="left">
+        <text>Earn</text>
+        <button id="mainMenuButton" type="button" class="btn btn-primary" style="float: right;">Main Menu</button>
+			</div>
+		</header>
+		<div class="modal fade" id="completionModal" role="dialog">
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h2 class="modal-title">Complete Quest</h2>
+						</div>
+						<div class="modal-body" style="padding-bottom:60px;">
+              <h3 class="modal-title">Are you sure you would like to complete this quest?</h3>
+              <hr>
+              <button type="button" id="cancelButton" data-dismiss="modal" style="float:left;">Cancel</button>
+              <button type="submit" id="completeButton" style="float:right;">Complete</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6" style="float:none;margin:auto;text-align:center;padding:5px;">
+			<h2 id="pageLabel">Today's Quests</h2><hr>
+		</div>
+		<div class="col-md-6" style="float:none;margin:auto;text-align:center;padding:5px;">
+			<h3 id="noQuestLabel">No Quests</h2>
+		</div>
+		<section id="contentArea" align="center" class="container">
+
+		</section>
+
+		<div id="toast">
+			<img src="QuestAssets/quest_setup.svg" style="width:50px;float:left">
+			<div id="desc"></div>
+		</div>
+
+		<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+
+		<script>
+		  var firebaseConfig = {
+		    apiKey: "AIzaSyCnsnGKPBILTDXQaIaxj9yQ2j2n9RWEu_g",
+		    authDomain: "project-quest.firebaseapp.com",
+		    databaseURL: "https://project-quest.firebaseio.com",
+		    projectId: "project-quest",
+		    storageBucket: "project-quest.appspot.com",
+		    messagingSenderId: "754866069984",
+		    appId: "1:754866069984:web:c74376fce252920e"
+		  };
+		  firebase.initializeApp(firebaseConfig);
+		</script>
+
+		<script type="text/javascript" src="Earn.js"></script>
+	</body>
+</html>
