@@ -266,7 +266,3 @@ footer li img {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 60px; opacity: 0;}
 }
-
-button {
-  -webkit-appearance: none;
-}
