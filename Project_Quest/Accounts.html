@@ -27,16 +27,16 @@
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
 							<h2 class="modal-title">Deposit Funds</h2>
 						</div>
-						<div class="modal-body" style="padding-bottom:20px;">
+						<div class="modal-body" style="padding-bottom:50px;">
               				<h3>Name:</h3>
               				<select style="width:100%;" id="depositUser" required>
 								<option hidden>Select Child</option>
 							</select>
 							<h3>Amount:</h3>
-              				<input id="depositAmount" type="number" class="no-spinners" style="width:100%;" id="transferAmount" min="0" step=".01" value="0.00" required></input>
+              				<input id="depositAmount" type="number" class="no-spinners" style="width:100%;" min="0" step=".01" value="0.00" required></input>
               				<hr>
 							<div style="text-align:center;">
-              					<button type="button" id="modalCancelButton" data-dismiss="modal" style="display:inline-block;float:left;">Cancel</button>
+              					<button type="button" data-dismiss="modal" style="display:inline-block;float:left;">Cancel</button>
               					<button type="submit" id="initiateDepositButton" style="display:inline-block;float:right;">Deposit</button>
 							</div>
 						</div>
@@ -44,15 +44,55 @@
 				</div>
 			</div>
 		</div>
-		<div class="modal fade" id="confirmModal" role="dialog">
+		<div class="modal fade" id="confirmDepositModal" role="dialog">
 			<div class="vertical-alignment-helper">
 				<div class="modal-dialog vertical-align-center">
 					<div class="modal-content">
 						<div class="modal-body" style="padding-bottom:60px;text-align:center;">
-              				<text id="confirmMessage"></text>
+              				<text id="confirmDepositMessage"></text>
               				<hr>
-            				<button type="button" id="confirmCancel" data-dismiss="modal" style="display:inline-block;float:left;">Cancel</button>
+            				<button type="button" data-dismiss="modal" style="display:inline-block;float:left;">Cancel</button>
             				<button type="submit" id="confirmDepositButton" style="display:inline-block;float:right;">Deposit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="spendModal" role="dialog">
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h2 class="modal-title">Spend Funds</h2>
+						</div>
+						<div class="modal-body" style="padding-bottom:50px;">
+              				<h3>Name:</h3>
+              				<select style="width:100%;" id="spendUser" required>
+								<option hidden>Select Child</option>
+							</select>
+							<h3>Amount:</h3>
+              				<input id="spendAmount" type="number" class="no-spinners" style="width:100%;" min="0" step=".01" value="0.00" required></input>
+              				<hr>
+							<div style="text-align:center;">
+              					<button type="button" data-dismiss="modal" style="display:inline-block;float:left;">Cancel</button>
+              					<button type="submit" id="initiateSpendButton" style="display:inline-block;float:right;">Spend</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="confirmSpendModal" role="dialog">
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-body" style="padding-bottom:60px;text-align:center;">
+              				<text id="confirmSpendMessage"></text>
+              				<hr>
+            				<button type="button" data-dismiss="modal" style="display:inline-block;float:left;">Cancel</button>
+            				<button type="submit" id="confirmSpendButton" style="display:inline-block;float:right;">Spend</button>
 						</div>
 					</div>
 				</div>
@@ -62,7 +102,8 @@
 		<div class="col-md-6" style="float:none;margin:auto;text-align:center;padding:5px;">
 			<h2 id="pageLabel">Accounts</h2>
 			<hr>
-			<button id="depositButton" type="button" style="margin-bottom: 0px; width: 60%;">Deposit</button>
+			<button id="depositButton" type="button" style="margin-bottom: 15px; width: 60%;">Deposit</button>
+			<button id="spendButton" type="button" style="margin-bottom: 0px; width: 60%;">Spend</button>
 		</div>
 		<section id="contentArea" align="center" class="container">
 			<!--

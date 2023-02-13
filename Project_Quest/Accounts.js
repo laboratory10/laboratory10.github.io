@@ -1,42 +1,51 @@
 let mainMenuButton = document.getElementById("mainMenuButton");
+
 let depositButton = document.getElementById("depositButton");
 let initiateDepositButton = document.getElementById("initiateDepositButton");
 let confirmDepositButton = document.getElementById("confirmDepositButton");
-
 let depositUser = document.getElementById("depositUser");
 let depositAmount = document.getElementById("depositAmount");
 
+let spendButton = document.getElementById("spendButton");
+let initiateSpendButton = document.getElementById("initiateSpendButton");
+let confirmSpendButton = document.getElementById("confirmSpendButton");
+let spendUser = document.getElementById("spendUser");
+let spendAmount = document.getElementById("spendAmount");
+
 mainMenuButton.onclick = mainMenu;
-
-//depositButton.onclick = displayDepositModal;
-//modalCancel.onclick = clearDepositModal;
-//modalDeposit.onclick = depositConfirmation;
-
 
 function mainMenu() {
   window.location = "Users.html";
 }
 
-$("#depositModal").on("hide.bs.modal");
-$("#depositModal").on("hidden.bs.modal");
-$("#confirmModal").on("hide.bs.modal");
+//$("#depositModal").on("hide.bs.modal");
+//$("#depositModal").on("hidden.bs.modal");
+//$("#confirmDepositModal").on("hide.bs.modal");
 
-depositButton.addEventListener("click", function() {displayUserModal();});
+depositButton.addEventListener("click", displayDepositModal);
 initiateDepositButton.addEventListener("click", depositConfirmation);
 confirmDepositButton.addEventListener("click", executeDeposit);
 
+spendButton.addEventListener("click", displaySpendModal);
+initiateSpendButton.addEventListener("click", spendConfirmation);
+confirmSpendButton.addEventListener("click", executeSpend);
 
-function displayUserModal () {
+
+function displayDepositModal () {
   $("#depositModal").modal();
+}
+
+function displaySpendModal () {
+  $("#spendModal").modal();
 }
 
 function depositConfirmation () {
   let validation = validateDeposit(depositUser.selectedIndex, depositAmount);
   if (validation === true) {
     $("#depositModal").modal("hide");
-    confirmMessage.innerHTML = "Are you sure you want to deposit $" + parseFloat(depositAmount.value).toFixed(2) + " to " + depositUser.options[depositUser.selectedIndex].text + "'s Savings Account?"
+    confirmDepositMessage.innerHTML = "Are you sure you want to deposit $" + parseFloat(depositAmount.value).toFixed(2) + " to " + depositUser.options[depositUser.selectedIndex].text + "'s Savings Account?"
     //depositUser.value
-    $("#confirmModal").modal();
+    $("#confirmDepositModal").modal();
   } else {
     desc.innerHTML = validation;
     toast.className = "show";
@@ -44,28 +53,81 @@ function depositConfirmation () {
   }
 }
 
-function executeDeposit () {
-  firebase.database().ref("accounts/" + firebase.auth().currentUser.uid + "/users/" + depositUser.value + "/savings_balance").set(parseFloat(depositAmount.value).toFixed(2));
-  desc.innerHTML = "Funds have been deposited";
-  toast.className = "show";
-  setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 5000);
-  $("#confirmModal").modal("hide");
-  clearDepositModal();
+function spendConfirmation () {
+  firebase.database().ref("accounts/" + firebase.auth().currentUser.uid + "/users/" + spendUser.value).once("value").then(function(snapshot) {
+    let validation = validateSpend(spendUser.selectedIndex, spendAmount, parseFloat(snapshot.child("spending_balance").val()));
+    if (validation === true) {
+      $("#spendModal").modal("hide");
+      confirmSpendMessage.innerHTML = "Are you sure you want to spend $" + parseFloat(spendAmount.value).toFixed(2) + " from " + spendUser.options[spendUser.selectedIndex].text + "'s Spending Account?"
+      $("#confirmSpendModal").modal();
+    } else {
+      desc.innerHTML = validation;
+      toast.className = "show";
+      setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 5000);
+    }
+  });
 }
 
-function validateDeposit(userIndex, depositAmount) {
+function executeDeposit () {
+  firebase.database().ref("accounts/" + firebase.auth().currentUser.uid + "/users/" + depositUser.value).once("value").then(function(snapshot) {
+    let currentBalance = parseFloat(snapshot.child("savings_balance").val());
+    let newBalance = currentBalance + parseFloat(depositAmount.value);
+    firebase.database().ref("accounts/" + firebase.auth().currentUser.uid + "/users/" + depositUser.value + "/savings_balance").set(newBalance.toFixed(2));
+    desc.innerHTML = "Funds have been deposited";
+    toast.className = "show";
+    setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 5000);
+    $("#confirmDepositModal").modal("hide");
+    clearDepositModal();
+  });
+}
+
+function executeSpend () {
+  firebase.database().ref("accounts/" + firebase.auth().currentUser.uid + "/users/" + spendUser.value).once("value").then(function(snapshot) {
+    let currentBalance = parseFloat(snapshot.child("spending_balance").val());
+    let newBalance = currentBalance - parseFloat(spendAmount.value);
+    firebase.database().ref("accounts/" + firebase.auth().currentUser.uid + "/users/" + spendUser.value + "/spending_balance").set(newBalance.toFixed(2));
+    desc.innerHTML = "Funds have been spent";
+    toast.className = "show";
+    setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 5000);
+    $("#confirmSpendModal").modal("hide");
+    clearSpendModal();
+  });
+}
+
+function validateDeposit(userIndex, amt) {
   if (userIndex == 0) {
-    return "Please select a child for the deposit"
+    return "Please select a child for the deposit";
   }
-  if (isNaN(depositAmount.value)) {
-    return "Not a valid amount"
+  if (isNaN(amt.value)) {
+    return "Not a valid amount";
   }
-  if (depositAmount.value <= 0) {
-    return "Not a valid amount"
+  if (amt.value <= 0) {
+    return "Not a valid amount";
   }
-  if (depositAmount.checkValidity() === false) {
-    return "Not a valid amount"
+  if (amt.checkValidity() === false) {
+    return "Not a valid amount";
   }
+  //validation passed, return true
+  return true;
+}
+
+function validateSpend(userIndex, amt, available) {
+  if (userIndex == 0) {
+    return "Please select a child for the deposit";
+  }
+  if (isNaN(amt.value)) {
+    return "Not a valid amount";
+  }
+  if (amt.value <= 0) {
+    return "Not a valid amount";
+  }
+  if (amt.checkValidity() === false) {
+    return "Not a valid amount";
+  }
+  if (amt.value > available) {
+    return "Insufficient funds";
+  }
+
   //validation passed, return true
   return true;
 }
@@ -73,6 +135,11 @@ function validateDeposit(userIndex, depositAmount) {
 function clearDepositModal () {
   depositUser.selectedIndex = 0;
   depositAmount.value = "0.00";
+}
+
+function clearSpendModal () {
+  spendUser.selectedIndex = 0;
+  spendAmount.value = "0.00";
 }
 
 firebase.auth().onAuthStateChanged(function() {
@@ -84,10 +151,15 @@ firebase.auth().onAuthStateChanged(function() {
       snapshot.forEach((user) => {
         if (user.child("type").val() == "kid") {
 
-          var option = document.createElement("option");
-          option.text = user.child("name").val();
-          option.value = user.key;
-          depositUser.add(option);
+          var optionDeposit = document.createElement("option");
+          optionDeposit.text = user.child("name").val();
+          optionDeposit.value = user.key;
+          depositUser.add(optionDeposit);
+
+          var optionSpend = document.createElement("option");
+          optionSpend.text = user.child("name").val();
+          optionSpend.value = user.key;
+          spendUser.add(optionSpend);
 
           var mainDiv = document.createElement("div");
           mainDiv.className = "col-md-6";
