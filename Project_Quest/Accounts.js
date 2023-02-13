@@ -1,10 +1,78 @@
 let mainMenuButton = document.getElementById("mainMenuButton");
+let depositButton = document.getElementById("depositButton");
+let initiateDepositButton = document.getElementById("initiateDepositButton");
+let confirmDepositButton = document.getElementById("confirmDepositButton");
+
+let depositUser = document.getElementById("depositUser");
+let depositAmount = document.getElementById("depositAmount");
 
 mainMenuButton.onclick = mainMenu;
+
+//depositButton.onclick = displayDepositModal;
+//modalCancel.onclick = clearDepositModal;
+//modalDeposit.onclick = depositConfirmation;
 
 
 function mainMenu() {
   window.location = "Users.html";
+}
+
+$("#depositModal").on("hide.bs.modal");
+$("#depositModal").on("hidden.bs.modal");
+$("#confirmModal").on("hide.bs.modal");
+
+depositButton.addEventListener("click", function() {displayUserModal();});
+initiateDepositButton.addEventListener("click", depositConfirmation);
+confirmDepositButton.addEventListener("click", executeDeposit);
+
+
+function displayUserModal () {
+  $("#depositModal").modal();
+}
+
+function depositConfirmation () {
+  let validation = validateDeposit(depositUser.selectedIndex, depositAmount);
+  if (validation === true) {
+    $("#depositModal").modal("hide");
+    confirmMessage.innerHTML = "Are you sure you want to deposit $" + parseFloat(depositAmount.value).toFixed(2) + " to " + depositUser.options[depositUser.selectedIndex].text + "'s Savings Account?"
+    //depositUser.value
+    $("#confirmModal").modal();
+  } else {
+    desc.innerHTML = validation;
+    toast.className = "show";
+    setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 5000);
+  }
+}
+
+function executeDeposit () {
+  firebase.database().ref("accounts/" + firebase.auth().currentUser.uid + "/users/" + depositUser.value + "/savings_balance").set(parseFloat(depositAmount.value).toFixed(2));
+  desc.innerHTML = "Funds have been deposited";
+  toast.className = "show";
+  setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 5000);
+  $("#confirmModal").modal("hide");
+  clearDepositModal();
+}
+
+function validateDeposit(userIndex, depositAmount) {
+  if (userIndex == 0) {
+    return "Please select a child for the deposit"
+  }
+  if (isNaN(depositAmount.value)) {
+    return "Not a valid amount"
+  }
+  if (depositAmount.value <= 0) {
+    return "Not a valid amount"
+  }
+  if (depositAmount.checkValidity() === false) {
+    return "Not a valid amount"
+  }
+  //validation passed, return true
+  return true;
+}
+
+function clearDepositModal () {
+  depositUser.selectedIndex = 0;
+  depositAmount.value = "0.00";
 }
 
 firebase.auth().onAuthStateChanged(function() {
@@ -15,6 +83,12 @@ firebase.auth().onAuthStateChanged(function() {
       contentArea.innerHTML = ""
       snapshot.forEach((user) => {
         if (user.child("type").val() == "kid") {
+
+          var option = document.createElement("option");
+          option.text = user.child("name").val();
+          option.value = user.key;
+          depositUser.add(option);
+
           var mainDiv = document.createElement("div");
           mainDiv.className = "col-md-6";
           mainDiv.style = "float:none;margin:auto;text-align:center;padding:5px;";
