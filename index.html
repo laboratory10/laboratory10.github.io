@@ -71,6 +71,34 @@
 				</div>
 			</div>
 		</div>
+		<div class="modal fade" id="auroModal" role="dialog">
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h1 class="modal-title">AURO: Flight Software</h1>
+						</div>
+						<div class="modal-body">
+							<p>Welcome to AURO! This repository houses the Flight Software source code for an avionics 
+								platform that has a small form factor and can fit into a large model rocket kit. 
+								While the focus of this project is the Flight Software for the avionics, you will also 
+								find source code for ground support equipment, design documentation, and log files from flights.
+								<br><br>
+								The motivation for this project is to develop a system that allows me to challenge and 
+								showcase my capabilities as a Flight Software Engineer. While the term Embedded Software 
+								Engineer is used more broadly across different industries, I am using the term 
+								Flight Software (FSW) throughout to signal that the expectation for autonomy and 
+								fault tolerance of this code should be on par with design principles used in 
+								spaceflight applications.
+								<br><br>
+								While the full source code for AURO is in a private reposity, a public README with more details 
+								is hosted on <a href="https://github.com/laboratory10/auro_overview">Github</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="modal fade" id="marsLinkModal" role="dialog">
 			<div class="vertical-alignment-helper">
 				<div class="modal-dialog vertical-align-center">
@@ -164,9 +192,19 @@
 		<section class="container">
 			<div class="row">
 				<figure class="col-md-6">
+					<p>AURO: Flight Software</p>
+					<svg version="1.1" viewBox="0 0 1024 500" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg" data-toggle="modal" data-target="#auroModal">
+						<rect fill="#0f3040" id="canvas_background" height="500" width="1024" y="0" x="0"/>
+						<image class="figure_icon" xlink:href="./img/AURO_logo.svg" height="100%" x="50%"></image>
+						<polygon points="937,439 976,439 961,424 972,413 1007,448 972,483 961,472 976,457 937,457" style="fill:#ffffff"/>
+					</svg>
+				</figure>
+				<figure class="col-md-6">
 					<p>MarsLink Orbital</p>
 					<img src="img/marslinkorbitalfeature.svg" data-toggle="modal" data-target="#marsLinkOrbitalModal">
 				</figure>
+			</div>
+			<div class="row">
 				<figure class="col-md-6">
 					<p>Project Martian</p>
 					<svg version="1.1" viewBox="0 0 1024 500" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg" data-toggle="modal" data-target="#martianModal">
@@ -197,10 +235,18 @@
 					<p>Project Blueprint</p>
 					<img src="img/projectblueprintfeature.svg" data-toggle="modal" data-target="#blueprintModal">
 				</figure>
+			</div>
+			<div class="row">
 				<figure class="col-md-6">
 					<p>MarsLink</p>
 					<img src="img/marslinkfeature.svg" data-toggle="modal" data-target="#marsLinkModal">
 				</figure>
+				<figure class="col-md-6" data-toggle="modal" data-target="#aboutModal">
+					<p>About Us</p>
+					<img src="img/lab10feature.svg">
+				</figure>
+			</div>
+				<!--for centering last figure if there are an odd number
 				<figure class="col-md-3">
 				</figure>
 				<figure class="col-md-6" data-toggle="modal" data-target="#aboutModal">
@@ -209,7 +255,7 @@
 				</figure>
 				<figure class="col-12.col-md-3">
 				</figure>
-			</div>
+				-->
 		</section>
 		<footer class="container">
 			<div class="row">
