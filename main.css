@@ -139,10 +139,6 @@ figure p {
   outline: none;
 }
 
-.figure_icon {
-  transform: translate(-25%);
-}
-
 footer {
   font-size: 14px;
   padding: 20px 0;
