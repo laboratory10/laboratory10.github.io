@@ -102,7 +102,7 @@ topText.setAttributeNS(null, "font-size", "36");
 topText.setAttributeNS(null, "font-weight", "bold");
 topText.setAttributeNS(null, "font-family", "arial");
 svg.appendChild(topText);
-topText.innerHTML = "DISCOVER APPS";
+topText.innerHTML = "DISCOVER PROJECTS";
 
 botText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
 botText.setAttributeNS(null, "text-anchor", "middle");

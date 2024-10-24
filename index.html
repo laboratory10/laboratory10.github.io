@@ -60,11 +60,11 @@
 						</div>
 						<div class="modal-body">
 							<p>
-								Laboratory10 is a small team that is passionate about science and space exploration.
-								We are experimenting with ways to make scientific data more accessible and engaging
-								to a wider audience. Accomplishing this goal would allow more people to benefit from research data
-								and inspire the next generation of explorers. If you have ideas and want to work with us to make
-								that happen, send us a message!
+								Laboratory10 is the name under which I publish my personal projects that showcase my passion
+								for science, technology, and space exploration. I've built systems to showcase my Flight Software
+								and Embedded Systems knowledge, experimented with ways to make scientific data more accessible and engaging
+								to a wider audience, and much more. If you want to chat about these projects or collaborate, use the 
+								contact button at the top right corner of this page to send me a message!
 							</p>
 						</div>
 					</div>
@@ -94,6 +94,39 @@
 								<br><br>
 								While the full source code for AURO is in a private repository, a public README with more details 
 								is hosted on <a href="https://github.com/laboratory10/auro_overview">Github</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="fauroModal" role="dialog">
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h1 class="modal-title">FAURO: F' Flight Software</h1>
+						</div>
+						<div class="modal-body">
+							<p>FAURO is coming soon! This project utilizes the same avionics platform as AURO but 
+								implements the Flight Software using the 
+								<a href="https://nasa.github.io/fprime/">F' Flight Software Architecture</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="rauroModal" role="dialog">
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h1 class="modal-title">RAURO: Rust Flight Software</h1>
+						</div>
+						<div class="modal-body">
+							<p>RAURO is coming soon! This project utilizes the same avionics platform as AURO but 
+								implements the Flight Software using the <a href="https://www.rust-lang.org/">Rust Language</a>.</p>
 						</div>
 					</div>
 				</div>
@@ -190,17 +223,28 @@
 			<script type="text/javascript" src="jumbotron.js"></script>
 		</section>
 		<section class="container">
+			<hr style="border: 1px solid black;">
+			<p align="center">FLIGHT SOFTWARE PROJECTS</p>
 			<div class="row">
-				<figure class="col-md-6">
-					<p>AURO: Flight Software</p>
+				<figure class="col-md-4">
+					<p align="center">AURO</p>
 					<img src="img/aurofeature.svg" data-toggle="modal" data-target="#auroModal">
 				</figure>
+				<figure class="col-md-4">
+					<p align="center">FAURO</p>
+					<img src="img/faurofeature.svg" data-toggle="modal" data-target="#fauroModal">
+				</figure>
+				<figure class="col-md-4">
+					<p align="center">RAURO</p>
+					<img src="img/raurofeature.svg" data-toggle="modal" data-target="#rauroModal">
+				</figure>
+			</div>
+			<hr style="border: 1px solid black;">
+			<div class="row">
 				<figure class="col-md-6">
 					<p>MarsLink Orbital</p>
 					<img src="img/marslinkorbitalfeature.svg" data-toggle="modal" data-target="#marsLinkOrbitalModal">
 				</figure>
-			</div>
-			<div class="row">
 				<figure class="col-md-6">
 					<p>Project Martian</p>
 					<svg version="1.1" viewBox="0 0 1024 500" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg" data-toggle="modal" data-target="#martianModal">
@@ -227,19 +271,25 @@
 					</svg>
 					<script type="text/javascript" src="projectMartian.js"></script>
 				</figure>
+			</div>
+			<div class="row">
 				<figure class="col-md-6">
 					<p>Project Blueprint</p>
 					<img src="img/projectblueprintfeature.svg" data-toggle="modal" data-target="#blueprintModal">
 				</figure>
-			</div>
-			<div class="row">
 				<figure class="col-md-6">
 					<p>MarsLink</p>
 					<img src="img/marslinkfeature.svg" data-toggle="modal" data-target="#marsLinkModal">
 				</figure>
+			</div>
+			<div class="row">
+				<figure class="col-md-3">
+				</figure>
 				<figure class="col-md-6" data-toggle="modal" data-target="#aboutModal">
 					<p>About Us</p>
 					<img src="img/lab10feature.svg">
+				</figure>
+				<figure class="col-md-3">
 				</figure>
 			</div>
 				<!--for centering last figure if there are an odd number
@@ -249,7 +299,7 @@
 					<p>About Us</p>
 					<img src="img/lab10feature.svg">
 				</figure>
-				<figure class="col-12.col-md-3">
+				<figure class="col-md-3">
 				</figure>
 				-->
 		</section>
